@@ -20,14 +20,24 @@
   } catch (error) {
     console.error("Your javascript has an error: " + error);
   }
-        </script>    
+        </script> 
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>   
     </head>
     
     <body>
         <div data-role="page" id="home">
             <div data-role="content">
                 <div id="logo" style="text-align: center"><h1>Physics!</h1></div>
-                
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading"></li>
+                    <li data-theme="a"></li>
+                    <li data-theme="a"></li>
+                    <li data-theme="a"></li>
+                    <li data-theme="a"></li>
             </div>
         </div>
     
