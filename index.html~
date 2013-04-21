@@ -198,15 +198,82 @@
    <mi>x</mi>
   </mrow>
 </math></div>
-	                    <div class="ui-block-b">a</div>	                    
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mo stretchy="false">Δ</mo>
+   <mrow>
+    <mi>x</mi>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mfrac>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>v</mi>
+          <mi>i</mi>
+         </msub>
+         <mo stretchy="false">+</mo>
+         <msub>
+          <mi>v</mi>
+          <mi>f</mi>
+         </msub>
+        </mrow>
+       </mrow>
+       <mrow>
+        <mn>2</mn>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+   </mrow>
+   <mo stretchy="false">Δ</mo>
+   <mi>t</mi>
+  </mrow>
+</math></div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Force</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a">a</div>
-	                    <div class="ui-block-b">a</div>
-	                    <div class="ui-block-a">a</div>
+                        <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>F</mi>
+     <mi mathvariant="italic">net</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mi mathvariant="italic">ma</mi>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <mi>p</mi>
+    <mo stretchy="false">=</mo>
+    <mi mathvariant="italic">mv</mi>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-a"><math>
+  <mrow>
+   <msub>
+    <mi>F</mi>
+    <mi mathvariant="italic">net</mi>
+   </msub>
+   <mo stretchy="false">Δ</mo>
+   <mrow>
+    <mi>t</mi>
+    <mo stretchy="false">=</mo>
+    <mo stretchy="false">Δ</mo>
+   </mrow>
+   <mi>p</mi>
+  </mrow>
+</math></div>
 	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
