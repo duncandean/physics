@@ -118,6 +118,8 @@
             
         <!-- Formulae -->
         <div data-role="page" id="formulae">
+          <div data-role="content">
+            <h1>Formulae</h1>
             <div data-role="collapsible-set">
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Motion</h3>
@@ -147,6 +149,7 @@
                     <h3>Alternating Current</h3>
                     <p>Null</p>
                 </div>
+              </div>
             </div>
             
             <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
