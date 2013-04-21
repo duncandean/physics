@@ -124,72 +124,72 @@
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Motion</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>	                    
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Force</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>	                    
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Work, Energy and Power</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>	                    
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Waves, Sound and Light</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>	                    
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Electrostatics</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>	                    
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Electric Circuits</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
-	                    <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>                    
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Alternating Current</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a"></div>
-	                    <div class="ui-block-b"></div>
+                        <div class="ui-block-a">a</div>
+	                    <div class="ui-block-b">a</div>
 	                </div>
                 </div>
               </div>
