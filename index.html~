@@ -500,20 +500,7 @@
    </mrow>
   </mrow>
 </math>
-</ br>
-<math>
-  <mrow>
-   <mrow>
-    <mi>E</mi>
-    <mo stretchy="false">=</mo>
-    <mi>h</mi>
-   </mrow>
-   <mfrac>
-    <mi>c</mi>
-    <mo stretchy="false">λ</mo>
-   </mfrac>
-  </mrow>
-</math>
+
 </div>
 	                    <div class="ui-block-a"><math>
   <mrow>
@@ -536,6 +523,20 @@
    <mrow>
     <mi>E</mi>
     <mo stretchy="false">=</mo>
+    <mi>h</mi>
+   </mrow>
+   <mfrac>
+    <mi>c</mi>
+    <mo stretchy="false">λ</mo>
+   </mfrac>
+  </mrow>
+</math>
+</div>	
+                        <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <mi>E</mi>
+    <mo stretchy="false">=</mo>
     <mrow>
      <msub>
       <mi>W</mi>
@@ -549,9 +550,9 @@
     </mrow>
    </mrow>
   </mrow>
-</math>
-</ br>
-<math>
+</math></div>          
+
+                        <div class="ui-block-b"><math>
   <mrow>
    <mrow>
     <msub>
@@ -565,20 +566,124 @@
     </msub>
    </mrow>
   </mrow>
-</math>
-</div>	                    
+</math></div>          
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
                     <h3>Electrostatics</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a">a</div>
-	                    <div class="ui-block-b">a</div>
-	                    <div class="ui-block-a">a</div>
-	                    <div class="ui-block-b">a</div>
-	                    <div class="ui-block-a">a</div>
-	                    <div class="ui-block-b">a</div>
-	                    <div class="ui-block-a">a</div>
+                        <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <mi>F</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi mathvariant="italic">kQ</mi>
+       <mn>1</mn>
+      </msub>
+      <msub>
+       <mi>Q</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+     <mrow>
+      <msup>
+       <mi>r</mi>
+       <mn>2</mn>
+      </msup>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <mi>E</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mrow>
+      <mi mathvariant="italic">kQ</mi>
+     </mrow>
+     <msup>
+      <mi>r</mi>
+      <mn>2</mn>
+     </msup>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <mi>E</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mi>V</mi>
+     <mi>d</mi>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <mi>E</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mi>F</mi>
+     <mi>q</mi>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <mi>U</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi mathvariant="italic">kQ</mi>
+       <mn>1</mn>
+      </msub>
+      <msub>
+       <mi>Q</mi>
+       <mn>2</mn>
+      </msub>
+     </mrow>
+     <mi>r</mi>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <mi>V</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mi>W</mi>
+     <mi>q</mi>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <mi>C</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mi>Q</mi>
+     <mi>V</mi>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
 	                    <div class="ui-block-b">a</div>	                    
                     </div>
                 </div>
