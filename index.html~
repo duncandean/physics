@@ -47,7 +47,7 @@
         <!-- Module 1 -->
         <div dat-role="page" id="module1_index">
             <div data-role="content">
-                <h1>Module 1</h1>
+                <h1>Mechanics</h1>
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
                     <li data-theme="b"><a href="#" data-transition="slide">Unit 1: Projectile Motion</a></li>
@@ -56,7 +56,57 @@
                     <li data-theme="b"><a href="#" data-transition="slide">Unit 4: Work, Energy and Power</a></li>
                     
                 </ul>
-                <a data-role="button" data-transition="fade" href="#home">Back</a>
+                <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
+            </div>
+        </div>
+        
+        
+        <!-- Module 2 -->
+        <div dat-role="page" id="module2_index">
+            <div data-role="content">
+                <h1>Waves, Sound and Light</h1>
+                <ul data-role="listview" data-divider-theme="a" data-inset="true">
+                    <li data-role="list-divider" role="heading"></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">The Doppler Effect</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">2D and 3D Wavefronts</a></li>
+                    
+                    
+                </ul>
+                <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
+            </div>
+        </div>
+        
+        
+        <!-- Module 3 -->
+        <div dat-role="page" id="module3_index">
+            <div data-role="content">
+                <h1>Electricity and Magnetism</h1>
+                <ul data-role="listview" data-divider-theme="a" data-inset="true">
+                    <li data-role="list-divider" role="heading"></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 1: Projectile Motion</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 2: Frames of Reference</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 3: Momentum and Impulse</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 4: Work, Energy and Power</a></li>
+                    
+                </ul>
+                <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
+            </div>
+        </div>
+        
+        
+        <!-- Module 1 -->
+        <div dat-role="page" id="module1_index">
+            <div data-role="content">
+                <h1>Mechanics</h1>
+                <ul data-role="listview" data-divider-theme="a" data-inset="true">
+                    <li data-role="list-divider" role="heading"></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 1: Projectile Motion</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 2: Frames of Reference</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 3: Momentum and Impulse</a></li>
+                    <li data-theme="b"><a href="#" data-transition="slide">Unit 4: Work, Energy and Power</a></li>
+                    
+                </ul>
+                <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
             </div>
         </div>
     
