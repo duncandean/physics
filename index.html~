@@ -370,7 +370,9 @@
    </msub>
   </mrow>
 </math>
+
 </ br>
+
 <math>
   <mrow>
    <mo stretchy="false">Δ</mo>
@@ -599,9 +601,10 @@
 	                </div>
                 </div>
               </div>
+              <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
             </div>
             
-            <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
+            
         </div>
     
     </body>   
