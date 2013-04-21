@@ -547,7 +547,24 @@
     </mrow>
    </mrow>
   </mrow>
-</math></div>	                    
+</math>
+</ br>
+<math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>W</mi>
+     <mn>0</mn>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <msub>
+     <mi mathvariant="italic">hf</mi>
+     <mn>0</mn>
+    </msub>
+   </mrow>
+  </mrow>
+</math>
+</div>	                    
                     </div>
                 </div>
                 <div data-role="collapsible" data-collapsed="true">
