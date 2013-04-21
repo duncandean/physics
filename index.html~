@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html manifest="physics.appcache">
+<html>
     <head>
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
         <meta charset="utf-8" />
@@ -60,6 +60,8 @@
             </div>
         </div>
         
+            <!-- Module 1 Units -->
+        
         
         <!-- Module 2 -->
         <div dat-role="page" id="module2_index">
@@ -75,6 +77,8 @@
                 <a data-role="button" data-transition="flip" href="#home" data-theme="c">Back</a>
             </div>
         </div>
+        
+            <!-- Module 2 Units -->
         
         
         <!-- Module 3 -->
@@ -92,6 +96,8 @@
             </div>
         </div>
         
+        <!-- Module 3 Units -->
+        
         
         <!-- Module 4 -->
         <div dat-role="page" id="module4_index">
@@ -105,6 +111,14 @@
                 </ul>
                 <a data-role="button" data-transition="flip" href="#home" data-theme="c">Back</a>
             </div>
+        </div>
+    
+            <!-- Module 4 Units -->
+            
+            
+        <!-- Formulae -->
+        <div data-role="page" id="formulae">
+        
         </div>
     
     </body>   
