@@ -274,8 +274,18 @@
    <mi>p</mi>
   </mrow>
 </math>
-</ br>
-<math>
+</div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <mi>w</mi>
+    <mo stretchy="false">=</mo>
+    <mi mathvariant="italic">mg</mi>
+   </mrow>
+  </mrow>
+</math></div>
+
+                        <div class="ui-block-a"><math>
   <mrow>
    <mo stretchy="false">Δ</mo>
    <mrow>
@@ -292,16 +302,6 @@
       <mi>i</mi>
      </msub>
     </mrow>
-   </mrow>
-  </mrow>
-</math>
-</div>
-	                    <div class="ui-block-b"><math>
-  <mrow>
-   <mrow>
-    <mi>w</mi>
-    <mo stretchy="false">=</mo>
-    <mi mathvariant="italic">mg</mi>
    </mrow>
   </mrow>
 </math></div>	                    
@@ -371,9 +371,24 @@
   </mrow>
 </math>
 
-</ br>
-
-<math>
+</div>                        
+                        
+	                    <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <mi>P</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mi>W</mi>
+     <mrow>
+      <mo stretchy="false">Δ</mo>
+      <mi>t</mi>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
   <mrow>
    <mo stretchy="false">Δ</mo>
    <mrow>
@@ -396,23 +411,8 @@
    </mrow>
   </mrow>
 </math>
-</div>
-	                    <div class="ui-block-a"><math>
-  <mrow>
-   <mrow>
-    <mi>P</mi>
-    <mo stretchy="false">=</mo>
-    <mfrac>
-     <mi>W</mi>
-     <mrow>
-      <mo stretchy="false">Δ</mo>
-      <mi>t</mi>
-     </mrow>
-    </mfrac>
-   </mrow>
-  </mrow>
-</math></div>
-	                    <div class="ui-block-b"><math>
+	                 </div>
+	                 <div class="ui-block-a"><math>
   <mrow>
    <mrow>
     <mi>P</mi>
