@@ -1070,7 +1070,8 @@
             <h1>About</h1>           
             </div>
             <div data-role="content">
-            
+                <p>This web app is a completely cross-platform app created by <strong>Duncan Dean</strong>. If you would like to be a content contributor please contact him.</p>
+                <p>Good luck with your physics!</p>
             </div>
             
          </div>
