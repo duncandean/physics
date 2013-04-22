@@ -27,7 +27,7 @@
             h1 {
                 text-align: center;
             }
-            math {padding:2px;}
+            math {padding:4px;}
         </style>   
     </head>
     
