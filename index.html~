@@ -47,7 +47,7 @@
         </div>
         
         <!-- Module 1 -->
-        <div dat-role="page" id="module1_index">
+        <div data-role="page" id="module1_index">
             <div data-role="content">
                 <h1>Mechanics</h1>
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">
@@ -66,7 +66,7 @@
         
         
         <!-- Module 2 -->
-        <div dat-role="page" id="module2_index">
+        <div data-role="page" id="module2_index">
             <div data-role="content">
                 <h1>Waves, Sound and Light</h1>
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">
@@ -84,7 +84,7 @@
         
         
         <!-- Module 3 -->
-        <div dat-role="page" id="module3_index">
+        <div data-role="page" id="module3_index">
             <div data-role="content">
                 <h1>Electricity and Magnetism</h1>
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">
@@ -102,7 +102,7 @@
         
         
         <!-- Module 4 -->
-        <div dat-role="page" id="module4_index">
+        <div data-role="page" id="module4_index">
             <div data-role="content">
                 <h1>Matter and Materials</h1>
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">
@@ -942,7 +942,94 @@
                <div data-role="collapsible" data-collapsed="true">
                     <h3>Alternating Current</h3>
                     <div class="ui-grid-a">
-                        <div class="ui-block-a">a</div>
+                        <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>I</mi>
+     <mi mathvariant="italic">rms</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi>I</mi>
+       <mi mathvariant="italic">max</mi>
+      </msub>
+     </mrow>
+     <mrow>
+      <msqrt>
+       <mrow>
+        <mn>2</mn>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>P</mi>
+     <mi mathvariant="italic">average</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <msub>
+     <mi>V</mi>
+     <mi mathvariant="italic">rms</mi>
+    </msub>
+   </mrow>
+   <msub>
+    <mi>I</mi>
+    <mi mathvariant="italic">rms</mi>
+   </msub>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-a"><math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>V</mi>
+     <mi mathvariant="italic">rms</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mi>V</mi>
+       <mi mathvariant="italic">max</mi>
+      </msub>
+     </mrow>
+     <mrow>
+      <msqrt>
+       <mrow>
+        <mn>2</mn>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>P</mi>
+     <mi mathvariant="italic">average</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <msubsup>
+     <mi>I</mi>
+     <mi mathvariant="italic">rms</mi>
+     <mn>2</mn>
+    </msubsup>
+   </mrow>
+   <mi>R</mi>
+  </mrow>
+</math></div>
 	                    <div class="ui-block-b">a</div>
 	                </div>
               </div>
