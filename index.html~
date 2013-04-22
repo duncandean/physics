@@ -37,7 +37,7 @@
                 <div id="logo" style="text-align: center"><h1>Physics!</h1></div>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
-                    <li data-theme="a"><a href="#module1_index" data-transition="slide" rel="external">Module 1: Mechanics</a></li>
+                    <li data-theme="a"><a href="#module1_index" data-transition="slide">Module 1: Mechanics</a></li>
                     <li data-theme="a"><a href="#module2_index" data-transition="slide">Module 2: Waves, Sound and Light</a></li>
                     <li data-theme="a"><a href="#module3_index" data-transition="slide">Module 3: Electricity and Magnetism</a></li>
                     <li data-theme="a"><a href="#module4_index" data-transition="slide">Module 4: Matter and Materials</a></li>
