@@ -27,6 +27,7 @@
             h1 {
                 text-align: center;
             }
+            math {padding:2px;}
         </style>   
     </head>
     
@@ -1030,7 +1031,29 @@
    <mi>R</mi>
   </mrow>
 </math></div>
-	                    <div class="ui-block-b">a</div>
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>P</mi>
+     <mi mathvariant="italic">average</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mrow>
+      <msubsup>
+       <mi>V</mi>
+       <mi mathvariant="italic">rms</mi>
+       <mn>2</mn>
+      </msubsup>
+     </mrow>
+     <mrow>
+      <mi>R</mi>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div>
 	                </div>
               </div>
               <a data-role="button" data-transition="fade" href="#home" data-theme="c">Back</a>
