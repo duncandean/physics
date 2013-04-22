@@ -898,7 +898,21 @@
    <mi>t</mi>
   </mrow>
 </math></div>
-	                    <div class="ui-block-b">a</div> 
+	                    <div class="ui-block-b"><math>
+  <mrow>
+   <mrow>
+    <mi>P</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <msup>
+      <mi>V</mi>
+      <mn>2</mn>
+     </msup>
+     <mi>R</mi>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math></div> 
 	                    <div class="ui-block-a"><math>
   <mrow>
    <mrow>
