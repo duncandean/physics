@@ -44,6 +44,7 @@
                     <li data-theme="a"><a href="#module4_index" data-transition="slide">Module 4: Matter and Materials</a></li>
                 </ul>
                 <a data-role="button" data-transition="fade" href="#formulae">Formulae</a>
+                <a data-role="button" data-transition="fade" href="#definitions" data-theme="d">Formulae</a>
                 <a data-role="button" href="#about" data-rel="dialog" data-transition="pop" data-theme="e">About</a>
             </div>
         </div>
@@ -86,7 +87,7 @@
             <h1>Huygens Principle</h1>           
             </div>
             <div data-role="content">
-                
+                <p>Every point on a wave-front may be considered a source of secondary spherical wavelets, which spread out in all directions at the same speed as the wave itself.</p>
             </div>
             
          </div>
