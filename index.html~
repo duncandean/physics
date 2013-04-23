@@ -105,7 +105,7 @@
          </div>
          
          
-         <div data-role="page" id="">
+         <!-- <div data-role="page" id="">
             <div data-role="header" data-theme="d">
             <h1></h1>           
             </div>
@@ -113,7 +113,7 @@
                 <p></p>
             </div>
             
-         </div>
+         </div> -->
         
         <!-- Module 1 -->
         <div data-role="page" id="module1_index">
