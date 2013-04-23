@@ -72,9 +72,21 @@
             </div>
             <div data-role="content">
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Definitions">
-	                <li><h2>Huygens Principle</h2><p>blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p></li>
+	                <li><a href="#huygens_principle" data-rel="dialog" data-transition="pop"><h2>Huygens Principle</h2><p>Every point on a wave-front may be considered a source of secondary spherical wavelets, which spread out in all directions at the same speed as the wave itself.</p></a></li>
 	                
                 </ul>
+            </div>
+    
+         </div>
+         
+        <!-- Definition pages -->
+         
+        <div data-role="page" id="huygens_principle">
+            <div data-role="header" data-theme="d">
+            <h1>Huygens Principle</h1>           
+            </div>
+            <div data-role="content">
+                
             </div>
             
          </div>
