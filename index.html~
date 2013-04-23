@@ -77,6 +77,9 @@
 	                <li><a href="#reflection" data-rel="dialog" data-transition="pop"><h2>Reflection</h2><p>The change in direction of a wavefront as it hits a barrier. (The wavefront does not travel through the interface but is reflected back through the same media.)</p></a></li>
 	                <li><a href="#coherent_sources" data-rel="dialog" data-transition="pop"><h2>Coherent Sources</h2><p>Sources which maintain the same phase relationship with each other.</p></a></li>
 	                <li><a href="#monochromatic_light" data-rel="dialog" data-transition="pop"><h2>Monochromatic Light</h2><p>Light which only has one wavelength.</p></a></li>
+	                <li><a href="#superpositioning" data-rel="dialog" data-transition="pop"><h2>Superpositioning</h2><p>When waves in a medium overlap, resulting in interference.</p></a></li>
+	                <li><a href="#refraction" data-rel="dialog" data-transition="pop"><h2>Refraction</h2><p>When a wave moves from one medium to another optical medium. The wave bends towards or away from a normal at the interface of the two mediums.</p></a></li>
+	                <li><a href="#diffraction" data-rel="dialog" data-transition="pop"><h2>Diffraction</h2><p>The bending of waves around the edges of an obstacle.</p></a></li>
 	                <!-- <li><a href="#" data-rel="dialog" data-transition="pop"><h2></h2><p></p></a></li> -->
 	                
                 </ul>
@@ -122,6 +125,26 @@
             </div>
             <div data-role="content">
                 <p>Light which only has one wavelength.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="superpositioning">
+            <div data-role="header" data-theme="d">
+            <h1>Superpositioning</h1>           
+            </div>
+            <div data-role="content">
+                <p>When waves in a medium overlap, resulting in interference.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="refraction">
+            <div data-role="header" data-theme="d">
+            <h1>Refraction</h1>           
+            </div>
+            <div data-role="content">
+                <p>When a wave moves from one medium to another optical medium. The wave bends towards or away from a normal at the interface of the two mediums.</p>
             </div>
             
          </div>
