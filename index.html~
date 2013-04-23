@@ -172,22 +172,32 @@
             
          </div>
          
-         <div data-role="page" id="">
+         <div data-role="page" id="anti-nodal_line">
             <div data-role="header" data-theme="d">
-            <h1></h1>           
+            <h1>Anti-nodal Line</h1>           
             </div>
             <div data-role="content">
-                <p></p>
+                <p>An imaginary line joining points where constructive interference occurs.</p>
             </div>
             
          </div>
          
-         <div data-role="page" id="">
+         <div data-role="page" id="nodal_line">
             <div data-role="header" data-theme="d">
-            <h1></h1>           
+            <h1>Nodal Line</h1>           
             </div>
             <div data-role="content">
-                <p></p>
+                <p>An imaginary line joining points where destructive interference occurs.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="doppler_effect">
+            <div data-role="header" data-theme="d">
+            <h1>Doppler Effect</h1>           
+            </div>
+            <div data-role="content">
+                <p>The apparent change in the frequency of a source of sound if there is relative motion between the source and the observer.</p>
             </div>
             
          </div>
