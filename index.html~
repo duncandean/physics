@@ -83,6 +83,7 @@
 	                <li><a href="#wavefront" data-rel="dialog" data-transition="pop"><h2>Wavefront</h2><p>An imaginary line joining all points that are in phase.</p></a></li>
 	                <li><a href="#anti-nodal_line" data-rel="dialog" data-transition="pop"><h2>Anti-nodal Line</h2><p>An imaginary line joining points where constructive interference occurs.</p></a></li>
 	                <li><a href="#nodal_line" data-rel="dialog" data-transition="pop"><h2>Nodal Line</h2><p>An imaginary line joining points where destructive interference occurs.</p></a></li>
+	                <li><a href="#doppler_effect" data-rel="dialog" data-transition="pop"><h2>Doppler Effect</h2><p>The apparent change in the frequency of a source of sound if there is relative motion between the source and the observer.</p></a></li>
 	                <!-- <li><a href="#" data-rel="dialog" data-transition="pop"><h2></h2><p></p></a></li> -->
 	                
                 </ul>
