@@ -57,7 +57,24 @@
             <div data-role="content">
                 <p>This web app is a completely cross-platform app created by <strong>Duncan Dean</strong>. If you would like to be a content contributor please contact him.</p>
                 <p>If you can come up with an awesome name for this app or provide an awesome logo, please tell us!</p>
+                <p>The official short link to this app is <a href="http://bit.ly/SHSphys">bit.ly/SHSphys</a></p>
                 <p>Good luck with your physics!</p>
+            </div>
+            
+         </div>
+         
+         
+        <!-- Definitions -->
+        
+        <div data-role="page" id="definitions">
+            <div data-role="header">
+            <h1>Definitions</h1>           
+            </div>
+            <div data-role="content">
+                <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Definitions">
+	                <li><h2>Huygens Principle</h2><p>blah blah blahblah blah blahblah blah blahblah blah blahblah blah blahblah blah blah</p></li>
+	                
+                </ul>
             </div>
             
          </div>
