@@ -80,6 +80,9 @@
 	                <li><a href="#superpositioning" data-rel="dialog" data-transition="pop"><h2>Superpositioning</h2><p>When waves in a medium overlap, resulting in interference.</p></a></li>
 	                <li><a href="#refraction" data-rel="dialog" data-transition="pop"><h2>Refraction</h2><p>When a wave moves from one medium to another optical medium. The wave bends towards or away from a normal at the interface of the two mediums.</p></a></li>
 	                <li><a href="#diffraction" data-rel="dialog" data-transition="pop"><h2>Diffraction</h2><p>The bending of waves around the edges of an obstacle.</p></a></li>
+	                <li><a href="#wavefront" data-rel="dialog" data-transition="pop"><h2>Wavefront</h2><p>An imaginary line joining all points that are in phase.</p></a></li>
+	                <li><a href="#anti-nodal_line" data-rel="dialog" data-transition="pop"><h2>Anti-nodal Line</h2><p>An imaginary line joining points where constructive interference occurs.</p></a></li>
+	                <li><a href="#nodal_line" data-rel="dialog" data-transition="pop"><h2>Nodal Line</h2><p>An imaginary line joining points where destructive interference occurs.</p></a></li>
 	                <!-- <li><a href="#" data-rel="dialog" data-transition="pop"><h2></h2><p></p></a></li> -->
 	                
                 </ul>
@@ -145,6 +148,46 @@
             </div>
             <div data-role="content">
                 <p>When a wave moves from one medium to another optical medium. The wave bends towards or away from a normal at the interface of the two mediums.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="diffraction">
+            <div data-role="header" data-theme="d">
+            <h1>Diffraction</h1>           
+            </div>
+            <div data-role="content">
+                <p>The bending of waves around the edges of an obstacle.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="wavefront">
+            <div data-role="header" data-theme="d">
+            <h1>Wavefront</h1>           
+            </div>
+            <div data-role="content">
+                <p>An imaginary line joining all points that are in phase.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="">
+            <div data-role="header" data-theme="d">
+            <h1></h1>           
+            </div>
+            <div data-role="content">
+                <p></p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="">
+            <div data-role="header" data-theme="d">
+            <h1></h1>           
+            </div>
+            <div data-role="content">
+                <p></p>
             </div>
             
          </div>
