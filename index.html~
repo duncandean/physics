@@ -240,7 +240,7 @@
                 <h1>Waves, Sound and Light</h1>
                 <ul data-role="listview" data-divider-theme="a" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
-                    <li data-theme="b"><a href="#" data-transition="slide">Unit 1: The Doppler Effect</a></li>
+                    <li data-theme="b"><a href="#module2_unit1" data-transition="slide">Unit 1: The Doppler Effect</a></li>
                     <li data-theme="b"><a href="#module2_unit2" data-transition="slide">Unit 2: 2D and 3D Wavefronts</a></li>
                     
                     
@@ -250,6 +250,113 @@
         </div>
         
             <!-- Module 2 Units -->
+            
+            <div data-role="page" data-theme="a" id="module2_unit1">
+                <div data-role="header"><a data-role="button" href="module2_index">Back</a>
+                    <h1>Module 2: Unit 1</h1></div>
+                <div data-role="content">
+                    <h1>The Doppler Effect</h1>
+                    <p>The Doppler Effect is the apparent change in the frequency of a source of sound if there is relative motion between the source and the observer.</p>
+                    <math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>f</mi>
+     <mi>L</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <mo stretchy="false">(</mo>
+     <mrow>
+      <mfrac>
+       <mrow>
+        <mrow>
+         <mi>v</mi>
+         <mo stretchy="false">±</mo>
+         <msub>
+          <mi>v</mi>
+          <mi>L</mi>
+         </msub>
+        </mrow>
+       </mrow>
+       <mrow>
+        <mrow>
+         <mi>v</mi>
+         <mo stretchy="false">±</mo>
+         <msub>
+          <mi>v</mi>
+          <mi>s</mi>
+         </msub>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="false">)</mo>
+    </mrow>
+   </mrow>
+   <msub>
+    <mi>f</mi>
+    <mi>s</mi>
+   </msub>
+  </mrow>
+</math>
+                    <ul>
+                        <li>Towards: <math>
+  <mrow>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <mi>v</mi>
+      <mo stretchy="false">+</mo>
+      <msub>
+       <mi>v</mi>
+       <mi>L</mi>
+      </msub>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow>
+      <mi>v</mi>
+      <mo stretchy="false">−</mo>
+      <msub>
+       <mi>v</mi>
+       <mi>s</mi>
+      </msub>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+</math></li>
+                        <li>Away: <math>
+  <mrow>
+   <mfrac>
+    <mrow>
+     <mrow>
+      <mi>v</mi>
+      <mo stretchy="false">-</mo>
+      <msub>
+       <mi>v</mi>
+       <mi>L</mi>
+      </msub>
+     </mrow>
+    </mrow>
+    <mrow>
+     <mrow>
+      <mi>v</mi>
+      <mo stretchy="false">+</mo>
+      <msub>
+       <mi>v</mi>
+       <mi>s</mi>
+      </msub>
+     </mrow>
+    </mrow>
+   </mfrac>
+  </mrow>
+</math></li>
+                    </ul>
+                    <img src="http://upload.wikimedia.org/wikipedia/commons/9/90/Dopplerfrequenz.gif" width="280px" />
+                </div>
+            </div>
             
             <div data-role="page" data-theme="a" id="module2_unit2">
                  <div data-role="header"><a data-role="button" href="#module2_index">Back</a>
@@ -319,9 +426,9 @@
 <h4>And now for something exciting... Welcome to my world</h4>
 <p>You've probably heard that electrons act as waves and particles. In the quantum world, something very perculiar pops up when firing electrons at a double-slit barrier. The individual electron causes interference with itslef and the stream of electrons through the double slit will cause a defraction pattern to occur. Now for the strange part... The electron (one electron) goes through the one slit, the other slit, both slits and none of the slits AT THE SAME TIME. Welcome to the quantum world where everything is topsy turvy and things make your head hurt. If that wasn't strange enough, the act of observing which slit the electron travels through actually breaks down the wave function of that electron! It then acts as a particle and does not form an interference pattern.</p>
 
-<p>Here is a video I have found to explain it nicely.</p>
+<p>These images show the build up of electrons on a screen over time when their wavefunction is not being collapsed due to observation of the path it takes.</p>
 
-<iframe width="94%" src="http://www.youtube.com/embed/DfPeprQ7oGc?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Double-slit_experiment_results_Tanamura_2.jpg/206px-Double-slit_experiment_results_Tanamura_2.jpg" width="260px" />
                 
                 </div>            
             </div>
