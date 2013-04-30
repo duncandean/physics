@@ -224,14 +224,23 @@
                     <li data-theme="b"><a href="#" data-transition="slide">Unit 1: Projectile Motion</a></li>
                     <li data-theme="b"><a href="#" data-transition="slide">Unit 2: Frames of Reference</a></li>
                     <li data-theme="b"><a href="#" data-transition="slide">Unit 3: Momentum and Impulse</a></li>
-                    <li data-theme="b"><a href="#" data-transition="slide">Unit 4: Work, Energy and Power</a></li>
+                    <li data-theme="b"><a href="#module1_unit4" data-transition="slide">Unit 4: Work, Energy and Power</a></li>
                     
                 </ul>
                 <a data-role="button" data-transition="flip" href="#home" data-theme="c">Back</a>
             </div>
         </div>
         
-            <!-- Module 1 Units -->         
+            <!-- Module 1 Units -->
+            
+            <div data-role="page" id="module1_unit4">
+                <div data-role="header"><a data-role="button" href="#module1_index">Back</a>
+                    <h1>Module 1: Unit 4</h1></div>
+                <div data-role="content">
+                    <h1>Work, Energy and Power</h1>
+                    <canvas id="canvas" width="600" height="300">I'm terribly sorry, but your device does not support the canvas element!</canvas>
+                </div>
+            </div>         
         
         
         <!-- Module 2 -->
@@ -424,7 +433,7 @@
 <p>The double-slit diffraction pattern is different to the single-slit one in the fact that it has equally spaced bands and the brightness is the same throughout. There is no central maximum.</p>
 
 <h4>And now for something exciting... Welcome to my world</h4>
-<p>You've probably heard that electrons act as waves and particles. In the quantum world, something very perculiar pops up when firing electrons at a double-slit barrier. The individual electron causes interference with itslef and the stream of electrons through the double slit will cause a defraction pattern to occur. Now for the strange part... The electron (one electron) goes through the one slit, the other slit, both slits and none of the slits AT THE SAME TIME. Welcome to the quantum world where everything is topsy turvy and things make your head hurt. If that wasn't strange enough, the act of observing which slit the electron travels through actually breaks down the wave function of that electron! It then acts as a particle and does not form an interference pattern.</p>
+<p>You've probably heard that electrons act as waves and particles. In the quantum world, something very perculiar pops up when firing electrons at a double-slit barrier. The individual electron causes interference with itslef and the stream of electrons through the double slit will cause a diffraction pattern to occur. Now for the strange part... The electron (one electron) goes through the one slit, the other slit, both slits and none of the slits AT THE SAME TIME. Welcome to the quantum world where everything is topsy turvy and things make your head hurt. If that wasn't strange enough, the act of observing which slit the electron travels through actually breaks down the wave function of that electron! It then acts as a particle and does not form an interference pattern.</p>
 
 <p>These images show the build up of electrons on a screen over time when their wavefunction is not being collapsed due to observation of the path it takes.</p>
 
@@ -1414,7 +1423,8 @@
         
          
     
-    </body>   
+    </body>
+    <script src="canvas.js"></script>   
     
 
 
