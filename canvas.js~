@@ -17,7 +17,7 @@ path2.strokeColor = 'red';
 var destination = new Point(130, 270);
 
 
-function onFrame(event){
+/*function onFrame(event){
     var vector = destination - path.position;
     if (vector.length < 5) {
         destination.y = destination.y*-1 + 350;
@@ -29,4 +29,4 @@ function onFrame(event){
     
     
     
-}
+}*/
