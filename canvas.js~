@@ -9,7 +9,7 @@ path3.strokeColor = 'blue';
 
 path.add(point1, point2, point3);
 path2.add(new Point(30, 30), new Point(100, 30), new Point(65, 90));
-path3.add(new Point(140, 60), new Point(200, 50), new Point(100, 120));
+path3.add(new Point(180, 80), new Point(240, 70), new Point(140, 140));
 path.closed = 'true';
 path2.closed = 'true';
 path3.closed = 'true';
