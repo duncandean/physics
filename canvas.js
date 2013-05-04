@@ -1,8 +1,4 @@
-$('a').click(function(){
-    ask = parseInt(prompt("What would you like the speed to be? (1-10)"));
-});
 
-var ask = parseInt(prompt("What would you like the speed to be? (1-10)"));
 
 // The amount of segment points we want to create:
 var amount = 16;
@@ -28,7 +24,7 @@ function onFrame(event) {
         var segment = path.segments[i];
 
         // A cylic value between -1 and 1
-        var sinus = Math.sin(event.time * ask + i);
+        var sinus = Math.sin(event.time * 4 + i);
         
         // Change the y position of the segment point:
         segment.point.y = sinus * height + 100;
