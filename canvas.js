@@ -1,10 +1,10 @@
 
 
 // The amount of segment points we want to create:
-var amount = 16;
+var amount = 100;
 
 // The maximum height of the wave:
-var height = 70;
+var height = 30;
 
 // Create a new path and style it:
 var path = new Path();
@@ -24,7 +24,7 @@ function onFrame(event) {
         var segment = path.segments[i];
 
         // A cylic value between -1 and 1
-        var sinus = Math.sin(event.time * 4 + i);
+        var sinus = Math.sin(event.time * 10 + i);
         
         // Change the y position of the segment point:
         segment.point.y = sinus * height + 100;

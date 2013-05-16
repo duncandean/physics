@@ -16,18 +16,16 @@ $(document).ready(function(){
     else if (isNaN(wavelength) === true){
     
         var calculation = String((width * Math.sin(angle)) / order_min);
-         $('#wave_calc').val(calculation);
+        
     
     }
     
     else if (isNaN(order_min) === true){
         var calculation = String((width * Math.sin(angle)) / wavelength);
-         $('#min_calc').val(calculation);
     }
     
     else if (isNaN(angle) === true){
         var calculation = String(Math.asin((order_min * wavelength) / width));
-         $('#angle_calc').val(calculation);
     }
   
   });

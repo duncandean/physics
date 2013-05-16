@@ -280,7 +280,7 @@
                 <div data-role="content">
                     <h1>Work, Energy and Power</h1>
                     <p>Currently under construction!</p>
-                    <canvas id="canvas" width="300" height="350">I'm terribly sorry, but your device does not support the canvas element!</canvas>
+                    <canvas id="canvas" width="300" height="350" view="iPhone">I'm terribly sorry, but your device does not support the canvas element!</canvas>
                 </div>
             </div>         
         
@@ -461,6 +461,17 @@
     <li>m: Order of the minimum</li>
     <li>a: Width of the slit</li>
     <li>λ: Wavlength of the light source in metres</li>
+    <h2>Formula Calculator</h2>
+    <label for="angle_calc">θ</label>
+    <input class="text_input" type="text" id="angle_calc" />
+    <label for="min_calc">m</label>
+    <input class="text_input" type="text" id="min_calc" />
+    <label for="wave_calc">λ</label>
+    <input class="text_input" type="text" id="wave_calc" />
+    <label for="width_calc">a</label>
+    <input class="text_input" type="text" id="width_calc" />
+    <input id="calculate" type="submit" value="Calculate" />
+
 </ul>
 <p><span>You may be asked to calculate distances. Appropriate use of the tan function is essential in these cases. Remember that the width of the central maximum is twice the length obtained through using the tan function.</span></p>
 
