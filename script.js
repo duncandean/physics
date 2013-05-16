@@ -7,7 +7,7 @@ $(document).ready(function(){
     
     if (isNaN(width) === true){
     
-        var calculation = String((order_min * wavelength) / Math.sin(angle));
+        var calculation = String((order_min * wavelength) / Math.sin((Math.PI/180) * angle));
         $('#width_calc').val(calculation);
         
         
@@ -15,18 +15,18 @@ $(document).ready(function(){
      
     else if (isNaN(wavelength) === true){
     
-        var calculation = String((width * Math.sin(angle)) / order_min);
+        var calculation = String((width * Math.sin((Math.PI/ 180) * angle)) / order_min);
          $('#wave_calc').val(calculation);
     
     }
     
     else if (isNaN(order_min) === true){
-        var calculation = String((width * Math.sin(angle)) / wavelength);
+        var calculation = String((width * Math.sin((Math.PI/ 180) * angle)) / wavelength);
          $('#min_calc').val(calculation);
     }
     
     else if (isNaN(angle) === true){
-        var calculation = String(Math.asin((order_min * wavelength) / width));
+        var calculation = String((180/Math.PI) * (Math.asin((order_min * wavelength) / width)));
          $('#angle_calc').val(calculation);
     }
   
