@@ -253,9 +253,9 @@
                 <div data-role="content">
                     <h1>Projectile Motion</h1>
                     <p>
-                    <span id="z-axis"></span>
-                    <span id="x-axis"></span>
-                    <span id="y-axis"></span>
+                    <span id="z_axis"></span>
+                    <span id="x_axis"></span>
+                    <span id="y_axis"></span>
                     </p>
                 </div>
             </div>
