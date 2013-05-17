@@ -1,4 +1,15 @@
 $(document).ready(function(){
+
+    window.addEventListener("deviceorientation", handleOrientation, true);
+    
+    function handleOrientation(event) {
+        var alpha = event.alpha;
+        $('#z_axis').html(String(alpha));
+    }
+
+
+
+
   $('#calculate').click(function(){
     var angle = parseFloat($('#angle_calc').val());
     var order_min = parseFloat($('#min_calc').val());
@@ -37,23 +48,6 @@ $(document).ready(function(){
         }
     });
 
-function handleOrientation(DeviceOrientationEvent) {
-  var absolute = DeviceOrientationEvent.absolute;
-  var alpha = DeviceOrientationEvent.alpha;
-  var beta = DeviceOrientationEvent.beta;
-  var gamma = DeviceOrientationEvent.gamma;
- 
-  $('#z_axis').html(alpha.String());
-}
-window.ondeviceorientation = function(event) {
-    var absolute = event.absolute;
-    var alpha = event.alpha;
-    var beta = event.beta;
-    var gamma = event.gamma;
- 
-    $('#z_axis').html(alpha.String());
 
-
-}
 
 });
