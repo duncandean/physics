@@ -13,9 +13,9 @@ $(document).ready(function(){
             $('#z_axis').css("color", "white");
         }
         
-        $('#z_axis').text(String(alpha.toFixed(2)));
-        $('#x_axis').text(String(beta.toFixed(2)));
-        $('#y_axis').text(String(gamma.toFixed(2)));
+        $('#z_axis').html(String(alpha.toFixed(2)));
+        $('#x_axis').html(String(beta.toFixed(2)));
+        $('#y_axis').html(String(gamma.toFixed(2)));
         
     }
 
