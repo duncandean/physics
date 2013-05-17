@@ -3,7 +3,8 @@ $(document).ready(function(){
     window.addEventListener("deviceorientation", handleOrientation, true);
     
     function handleOrientation(event) {
-
+        var alpha = event.alpha;
+        $('#z_axis').html(String(alpha));
     }
 
 
