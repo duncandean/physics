@@ -463,13 +463,13 @@
     <li>λ: Wavlength of the light source in metres</li>
     <h2>Formula Calculator</h2>
     <label for="angle_calc">θ</label>
-    <input type="text" id="angle_calc" />
+    <input class="text_input" type="text" id="angle_calc" />
     <label for="min_calc">m</label>
-    <input type="text" id="min_calc" />
+    <input class="text_input" type="text" id="min_calc" />
     <label for="wave_calc">λ</label>
-    <input type="text" id="wave_calc" />
+    <input class="text_input" type="text" id="wave_calc" />
     <label for="width_calc">a</label>
-    <input type="text" id="width_calc" />
+    <input class="text_input" type="text" id="width_calc" />
     <input id="calculate" type="submit" value="Calculate" />
 
 </ul>
