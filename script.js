@@ -45,10 +45,15 @@ function handleOrientation(DeviceOrientationEvent) {
  
   $('#z_axis').html(alpha.String());
 }
+window.ondeviceorientation = function(event) {
+    var absolute = event.absolute;
+    var alpha = event.alpha;
+    var beta = event.beta;
+    var gamma = event.gamma;
+ 
+    $('#z_axis').html(alpha.String());
 
 
-window.addEventListener("deviceorientation", handleOrientation, true);
-
-function
+}
 
 });
