@@ -4,8 +4,8 @@ $(document).ready(function(){
     
     function handleOrientation(event) {
         var alpha = event.alpha;
-        if (alpha > 180.00 && alpha < 270.00){
-            $('span').css('color', 'red');
+        if (alpha > 180.00){
+            $('span').css("color", "red");
         }
         $('#z_axis').html(String(alpha.toFixed(2)));
         
