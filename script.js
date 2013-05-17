@@ -4,7 +4,7 @@ $(document).ready(function(){
     
     function handleOrientation(event) {
         var alpha = event.alpha;
-        $('#z_axis').html(String(alpha.toFixed(0)));
+        $('#z_axis').html(String(alpha.toFixed(1)));
     }
 
 
