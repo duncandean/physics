@@ -9,9 +9,6 @@ $(document).ready(function(){
         if (alpha > 180.00){
             $('#z_axis').css("color", "red");
         }
-        else if (alpha < 180.00){
-            $('#z_axis').css("color", "white");
-        }
         
         $('#z_axis').html(String(alpha.toFixed(2)));
         $('#x_axis').html(String(beta.toFixed(2)));
