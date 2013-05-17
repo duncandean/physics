@@ -37,4 +37,18 @@ $(document).ready(function(){
         }
     });
 
+function handleOrientation(orientData) {
+  var absolute = orientData.absolute;
+  var alpha = orientData.alpha;
+  var beta = orientData.beta;
+  var gamma = orientData.gamma;
+ 
+  $('#z-axis').text(alpha.String());
+}
+
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+
+function
+
 });

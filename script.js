@@ -38,10 +38,10 @@ $(document).ready(function(){
     });
 
 function handleOrientation(orientData) {
-  var absolute = orientData.absolute;
-  var alpha = orientData.alpha;
-  var beta = orientData.beta;
-  var gamma = orientData.gamma;
+  var absolute = DeviceOrientationEvent.absolute;
+  var alpha = DeviceOrientationEvent.alpha;
+  var beta = DeviceOrientationEvent.beta;
+  var gamma = DeviceOrientationEvent.gamma;
  
   $('#z-axis').text(alpha.String());
 }
