@@ -12,18 +12,7 @@ $(document).ready(function(){
         else if {
             $('#z_axis').css("color", "white");
         }
-        if (beta > 0.00){
-            $('#x_axis').css("color", "blue");
-        }
-        else if {
-            $('#x_axis').css("color", "white");
-        }
-        if (gamma > 0.00){
-            $('#y_axis').css("color", "yellow");
-        }
-        else if {
-            $('#y_axis').css("color", "white");
-        }
+        
         $('#z_axis').text(String(alpha.toFixed(2)));
         $('#x_axis').text(String(beta.toFixed(2)));
         $('#y_axis').text(String(gamma.toFixed(2)));
