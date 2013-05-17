@@ -4,7 +4,11 @@ $(document).ready(function(){
     
     function handleOrientation(event) {
         var alpha = event.alpha;
+        if (alpha > 90.0 && alpha < 180){
+            $('span').css('color': 'red');
+        }
         $('#z_axis').html(String(alpha.toFixed(1)));
+        
     }
 
 
