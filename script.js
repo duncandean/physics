@@ -37,13 +37,13 @@ $(document).ready(function(){
         }
     });
 
-function handleOrientation(orientData) {
+function handleOrientation(DeviceOrientationEvent) {
   var absolute = DeviceOrientationEvent.absolute;
   var alpha = DeviceOrientationEvent.alpha;
   var beta = DeviceOrientationEvent.beta;
   var gamma = DeviceOrientationEvent.gamma;
  
-  $('#z-axis').text(alpha.String());
+  $('#z_axis').html(alpha.String());
 }
 
 
