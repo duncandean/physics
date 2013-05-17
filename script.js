@@ -4,13 +4,23 @@ $(document).ready(function(){
     
     function handleOrientation(event) {
         var alpha = event.alpha;
+        var beta = event.beta;
+        var gamma = event.gamma;
         if (alpha > 180.00){
-            $('span #z_axis').css("color", "red");
+            $('#z_axis').css("color", "red");
         }
         else {
-            $('span #z_axis').css("color", "white");
+            $('#z_axis').css("color", "white");
+        }
+        if (beta > 0.00){
+            $('#x_axis').css("color", "red");
+        }
+        else {
+            $('#x_axis').css("color", "white");
         }
         $('#z_axis').html(String(alpha.toFixed(2)));
+        $('#x_axis').html(String(beta.toFixed(2)));
+        $('#y_axis').html(String(gamma.toFixed(2)));
         
     }
 
