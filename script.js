@@ -9,18 +9,17 @@ $(document).ready(function(){
         if (alpha > 180.00){
             $('#z_axis').css("color", "red");
         }
-        else {
+        else if {
             $('#z_axis').css("color", "white");
         }
         if (beta > 0.00){
             $('#x_axis').css("color", "red");
         }
-        else {
+        else if {
             $('#x_axis').css("color", "white");
         }
-        $('#z_axis').html(String(alpha.toFixed(2)));
-        $('#x_axis').html(String(beta.toFixed(2)));
-        $('#y_axis').html(String(gamma.toFixed(2)));
+        $('#z_axis').html(String(alpha.toFixed(2)) + "  " + String(beta.toFixed(2)) + "  " + String(gamma.toFixed(2)));
+
         
     }
 
