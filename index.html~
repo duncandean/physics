@@ -261,7 +261,7 @@
                     <br> 
                     <span id="y_axis"></span>
                     </p>
-                    <a target="_blank" href="canvas.html">Go to the canvas!</a>
+                    <p><a target="_blank" href="canvas.html">Go to the canvas!</a></p>
                     
                 </div>
             </div>
