@@ -15,6 +15,20 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
+        <script type="text/paperscript" canvas="canvas">
+        
+
+var path = new Path.Circle(new Point(view.size.width/2, view.size.height/2), 5) 
+
+path.strokeColor = 'white';
+
+function onFrame(event){
+
+}
+
+</script>
+        
         <title>Physics!</title>
         
         
@@ -259,7 +273,7 @@
                     <br> 
                     <span id="y_axis"></span>
                     </p>
-                    <p><a href="canvas.html">Go to canvas!!</a></p>
+                    <canvas id="canvas" resize="true"></canvas>
                     
                 </div>
             </div>

@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 var width, height, center;
 var points = 10;
 var smooth = true;
