@@ -273,7 +273,7 @@ function onFrame(event){
                     <br> 
                     <span id="y_axis"></span>
                     </p>
-                    <p><a href="canvas.html">Go to canvas!!</a></p>
+                    <canvas id="canvas" resize="true"></canvas>
                     
                 </div>
             </div>
