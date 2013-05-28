@@ -1,3 +1,5 @@
+$(document).ready(function(){
+
 var amount = 20;
 var myPath = new Path();
 
@@ -11,3 +13,5 @@ function onFrame(event) {
     
     $('#times').html(parseInt(event.time));
 }
+
+});
