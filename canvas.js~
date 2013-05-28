@@ -24,7 +24,7 @@ function onFrame(event) {
         var segment = path.segments[i];
 
         // A cylic value between -1 and 1
-        var sinus = Math.sin(event.time * 3 + i);
+        var sinus = Math.sin(event.time * 10 + i);
         
         // Change the y position of the segment point:
         segment.point.y = sinus * height + 100;
