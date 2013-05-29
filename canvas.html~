@@ -5,9 +5,56 @@
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <meta charset="UTF-8">
         <script src="paper.js" type="text/javascript"></script>
+        <style>
+            body {background: black;}
+            canvas {background: black;}
+            p{color: white;}
+        </style>
         <script type="text/paperscript" canvas="canvas">
-        
+ 
+var startPoint = new Point(view.size.width/2 - 15, view.size.height/2 - 50);
+var chromosome = new Path({
+    strokeColor: 'white',
+    fillColor: 'purple',
+    smooth: true,
 
+});
+chromosome.add(startPoint);
+
+var rightThroughPoint = new Point(view.size.width/2 - 5, view.size.height/2);
+var rightToPoint = new Point(view.size.width/2 - 15, view.size.height/2 + 50);
+var leftThroughPoint = new Point(view.size.width/2 - 25, view.size.height/2);
+
+
+chromosome.arcTo(rightThroughPoint, rightToPoint);
+chromosome.arcTo(leftThroughPoint, startPoint);
+
+var chromosome2 = chromosome.clone();
+chromosome2.position.x += 30;
+
+//var centromere = Path.Circle(new Point(115, 150), 12);
+var centromere = Path.Circle(new Point(view.size.width/2, view.size.height/2), 12);
+centromere.fillColor = 'yellow';
+centromere.strokeColor = 'white';
+
+
+var original1 = chromosome.position.x;
+var original2 = chromosome2.position.x;
+
+function onFrame(event){
+    //$('#times').html(parseInt(event.time));
+    chromosome.position.x -= 1;
+    chromosome2.position.x += 1;
+    centromere.opacity -= 0.014;
+    
+    if (chromosome.position.x < view.size.width/5){
+        chromosome.position.x = original1;
+        chromosome2.position.x = original2;
+        centromere.opacity = 1;
+    }
+}
+        
+/*
 var path = new Path.Circle(new Point(view.size.width/2, view.size.height), 5) 
 
 path.strokeColor = 'black';
@@ -17,7 +64,7 @@ var radius = path.bounds.width/2
 
 function onFrame(event){
     $('#times').html(parseInt(event.time));
-    radius += 0.0001;
+    radius += 0.001;
     path.scale(radius / 5);
 
     if (radius > 5.216){
@@ -29,11 +76,11 @@ function onFrame(event){
         radius = 5;
     }
 }
-
+*/
 </script>
     </head>
     <body>
         <canvas id="canvas" resize="true"></canvas>
-        <p id="times"></p>
+        <!--<p id="times"></p>-->
     </body>
 </html>
