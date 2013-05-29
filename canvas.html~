@@ -8,19 +8,21 @@
         <script type="text/paperscript" canvas="canvas">
         
 
-var path = new Path.Circle(new Point(view.size.width/2, view.size.height/2), 5) 
+var path = new Path.Circle(new Point(view.size.width/2, view.size.height), 5) 
 
 path.strokeColor = 'black';
+path.fillColor = 'red';
+path.strokeWidth = 5;
 var radius = path.bounds.width/2
 
 function onFrame(event){
     $('#times').html(parseInt(event.time));
-    radius += 0.001;
+    radius += 0.0001;
     path.scale(radius / 5);
 
-    if (radius > 5.19){
-        path.position.x += path.bounds.width/2 - 6;
-        path.position.y += path.bounds.height/2 - 6;
+    if (radius > 5.216){
+        path.position.x += path.bounds.width/2 - 5;
+        path.position.y += path.bounds.height/2 - 5;
         path.bounds.width = 5*2;
         path.bounds.height = 5*2;
         
