@@ -45,9 +45,9 @@ function onFrame(event){
     //$('#times').html(parseInt(event.time));
     chromosome.position.x -= 1;
     chromosome2.position.x += 1;
-    centromere.opacity -= 0.014;
+    centromere.opacity = (chromosome.position.x)/view.size.width/2;
     
-    if (chromosome.position.x < view.size.width/5){
+    if (chromosome.position.x < 10){
         chromosome.position.x = original1;
         chromosome2.position.x = original2;
         centromere.opacity = 1;
