@@ -12,10 +12,20 @@ var path = new Path.Circle(new Point(view.size.width/2, view.size.height/2), 5)
 
 path.strokeColor = 'black';
 var radius = path.bounds.width/2
+
 function onFrame(event){
     $('#times').html(parseInt(event.time));
-    radius += 0.00000000001;
+    radius += 0.001;
     path.scale(radius / 5);
+
+    if (radius > 5.19){
+        path.position.x += path.bounds.width/2 - 6;
+        path.position.y += path.bounds.height/2 - 6;
+        path.bounds.width = 5*2;
+        path.bounds.height = 5*2;
+        
+        radius = 5;
+    }
 }
 
 </script>
