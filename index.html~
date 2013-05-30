@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="physics.appcache">
     <head>
         
         <!-- Sets the title of the web app -->
@@ -262,6 +262,7 @@
                     <span id="y_axis"></span>
                     </p>
                     <p><a target="_blank" href="canvas.html">Go to the canvas!</a></p>
+                    <input type="camera" id="take-picture" accept="image/*" capture="camera"/>
                     
                 </div>
             </div>
