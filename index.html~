@@ -19,26 +19,18 @@
         <link rel="apple-touch-startup-image" href="./startup.png">
         <script type="text/javascript" src="./paper.js"></script>
         <script type="text/paperscript" canvas="projectile">
-        
-            var gravity = 9.81;
-            var height = 10;
+
 
             
-            var ball = new Path.Circle(new Point(view.size.width/2, 20), 10)
+            var ball = new Path.Circle(new Point(view.size.width/2, view.size.height/2), 10)
             ball.fillColor = 'red';
-            var originalY = ball.position.y
             
+            
+
             
             function onFrame(event) {
+                ball.position.y += (ball.position.y - 20) * Math.sin(event.count*0.018)
                 
-                var velocity = event.time * gravity;
-                ball.position.y += velocity * event.time
-                
-                if (view.size.height - ball.position.y < 20){
-                    gravity = 0;
-                    
-                }
-            
             }
             
         
@@ -290,7 +282,7 @@
                     </p>
                     <p><a target="_blank" href="canvas.html">Go to the canvas!</a></p>
                     <input type="file" id="take-picture" accept="image/*;capture=camera"/>
-                    <canvas id="projectile" width="280" height="440"></canvas>
+                    <canvas id="projectile" width="280" height="300"></canvas>
                     
                 </div>
             </div>
