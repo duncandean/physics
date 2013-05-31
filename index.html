@@ -19,11 +19,28 @@
         <link rel="apple-touch-startup-image" href="./startup.png">
         <script type="text/javascript" src="./paper.js"></script>
         <script type="text/paperscript" canvas="projectile">
-        var point1 = new Point(20, 40);
-        var point2 = new Point(100, 150);
         
-        var myPath = new Path(point1, point2);
-        myPath.strokeColor = 'white';
+        var path = new Path.Circle(new Point(view.size.width/2, view.size.height), 5) 
+
+path.strokeColor = 'black';
+path.fillColor = 'red';
+path.strokeWidth = 5;
+var radius = path.bounds.width/2
+
+function onFrame(event){
+    $('#times').html(parseInt(event.time));
+    radius += 0.001;
+    path.scale(radius / 5);
+
+    if (radius > 5.186){
+        path.position.x += path.bounds.width/2 - 5;
+        path.position.y += path.bounds.height/2 - 5;
+        path.bounds.width = 5*2;
+        path.bounds.height = 5*2;
+        
+        radius = 5;
+    }
+}
         
         </script>
         
