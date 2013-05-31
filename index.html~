@@ -15,7 +15,10 @@
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <link rel="apple-touch-icon" href="./touch.png"/>
+        <link rel="apple-touch-startup-image" href="./startup.png">
         
+        <script type="text/paperscript" canvas="projectile"></script>
         
         <title>Physics!</title>
         
@@ -263,6 +266,7 @@
                     </p>
                     <p><a target="_blank" href="canvas.html">Go to the canvas!</a></p>
                     <input type="file" id="take-picture" accept="image/*;capture=camera"/>
+                    <canvas id="projectile" width="300" height="200"></canvas>
                     
                 </div>
             </div>

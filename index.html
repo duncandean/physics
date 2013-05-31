@@ -17,7 +17,15 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="apple-touch-icon" href="./touch.png"/>
         <link rel="apple-touch-startup-image" href="./startup.png">
+        <script type="text/javascript" src="./paper.js"></script>
+        <script type="text/paperscript" canvas="projectile">
+        var point1 = new Point(20, 40);
+        var point2 = new Point(100, 150);
         
+        var myPath = new Path(point1, point2);
+        myPath.strokeColor = 'white';
+        
+        </script>
         
         <title>Physics!</title>
         
@@ -265,6 +273,7 @@
                     </p>
                     <p><a target="_blank" href="canvas.html">Go to the canvas!</a></p>
                     <input type="file" id="take-picture" accept="image/*;capture=camera"/>
+                    <canvas id="projectile" width="300" height="200"></canvas>
                     
                 </div>
             </div>
