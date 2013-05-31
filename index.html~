@@ -29,7 +29,7 @@
 
             
             function onFrame(event) {
-                ball.position.y += (ball.position.y - 20) * Math.sin(event.count*0.018)
+                ball.position.y += Math.sin(event.count*0.018);
                 
             }
             
