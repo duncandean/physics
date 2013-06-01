@@ -18,23 +18,31 @@
         <link rel="apple-touch-icon" href="./touch.png"/>
         <link rel="apple-touch-startup-image" href="./startup.png">
         <script type="text/javascript" src="./paper.js"></script>
-        <script type="text/paperscript" canvas="projectile">
-
-
+        <script type="text/paperscript" canvas="projectile1">
             
-            var ball = new Path.Circle(new Point(view.size.width/2, view.size.height/2), 10);
-            ball.fillColor = 'red';
+                       
+            var building_height = 10;
+            var building_left = new Point(0, 50);
+            var building_corner = new Point(80, 50);
+            var building_floor = new Point(80, view.size.height);
+            var building = new Path(building_left, building_corner, building_floor);
             
+            building.strokeColor = 'white';
             
-
+            var boy_head = new Path.Circle(new Point(60, 5), 5);
+            boy_head.strokeColor = 'white';
+            var boy_body = new Path(new Point(60, 10), new Point(60, 30), new Point(70, 50), new Point(60, 30), new Point(50, 50));
+            boy_body.strokeColor = 'white';
+            var boy_arms = new Path(new Point(50, 25), new Point(82, 10));
+            boy_arms.strokeColor = 'white';
             
-            function onFrame(event) {
-                ball.position.y += Math.sin(event.count*0.018);
-                
-            }
+            var ball = new Path.Circle(new Point(), );
+            
             
         
         </script>
+        
+        
         
         <title>Physics!</title>
         
@@ -113,6 +121,7 @@
                     <li><a href="#power" data-rel="dialog" data-transition="pop"><h2>Power</h2><p>Power is the rate at which work is done.</p></a></li>
                     <li><a href="#mechanical_energy" data-rel="dialog" data-transition="pop"><h2>Mechanical Energy</h2><p>Mechanical energy is the sum of the potential energy and the kinetic energy of an object or system.</p></a></li>
                     <li><a href="#mechanical_energy_law" data-rel="dialog" data-transition="pop"><h2>Law of the conservation of mechanical energy</h2><p>The total mechanical energy of an isolated system remains constant in magnitude.</p></a></li>
+                    <li><a href="#work_energy" data-rel="dialog" data-transition="pop"><h2>Work-Energy Principle</h2><p>The net work done on an object by the net or resultant force, equals the change in kinetic energy of the object.</p></a></li>
                     
                 
                     <li data-role="list-divider" data-divider-theme data-theme="e">Waves, Light and Sound</li>
@@ -307,6 +316,16 @@
             
          </div>
          
+         <div data-role="page" id="work_energy">
+            <div data-role="header" data-theme="d">
+            <h1>Work-Energy Principle</h1>           
+            </div>
+            <div data-role="content">
+                <p>The net work done on an object by the net or resultant force, equals the change in kinetic energy of the object.</p>
+            </div>
+            
+         </div>
+         
          
          <!-- <div data-role="page" id="">
             <div data-role="header" data-theme="d">
@@ -343,15 +362,10 @@
                 <div data-role="content">
                     <h1>Projectile Motion</h1>
                     <p>
-                    <span id="z_axis"></span>
-                    <br>
-                    <span id="x_axis"></span>
-                    <br> 
-                    <span id="y_axis"></span>
+                    <canvas id="projectile1" width="280" height="300"></canvas>
                     </p>
                     
-                    <input type="file" id="take-picture" accept="image/*;capture=camera"/>
-                    <canvas id="projectile" width="280" height="300"></canvas>
+                    
                     
                 </div>
             </div>
