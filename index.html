@@ -106,6 +106,16 @@
             </div>
             <div data-role="content">
                 <ul data-role="listview" data-filter="true" data-filter-placeholder="Search Definitions">
+                    <li data-role="list-divider" data-divider-theme data-theme="e">Mechanics</li>
+                    <li><a href="#work" data-rel="dialog" data-transition="pop"><h2>Work</h2><p>Work is done on an object if an applied force causes a displacement of the object.</p></a></li>
+                    <li><a href="#potential_energy" data-rel="dialog" data-transition="pop"><h2>Potential Energy</h2><p>The energy an object possesses as a result of its position in a field, in this case, the gravitational field. (The ability to do work)</p></a></li>
+                    <li><a href="#kinetic_energy" data-rel="dialog" data-transition="pop"><h2>Kinetic Energy</h2><p>The energy an object possesses due to its motion. (The work needed to accelerate a body of a given mass from rest to its stated velocity.)</p></a></li>
+                    <li><a href="#power" data-rel="dialog" data-transition="pop"><h2>Power</h2><p>Power is the rate at which work is done.</p></a></li>
+                    <li><a href="#mechanical_energy" data-rel="dialog" data-transition="pop"><h2>Mechanical Energy</h2><p>Mechanical energy is the sum of the potential energy and the kinetic energy of an object or system.</p></a></li>
+                    <li><a href="#mechanical_energy_law" data-rel="dialog" data-transition="pop"><h2>Law of the conservation of mechanical energy</h2><p>The total mechanical energy of an isolated system remains constant in magnitude.</p></a></li>
+                    <li><a href="#work_energy" data-rel="dialog" data-transition="pop"><h2>Work-Energy Principle</h2><p>The net work done on an object by the net or resultant force, equals the change in kinetic energy of the object.</p></a></li>
+                    
+                
                     <li data-role="list-divider" data-divider-theme data-theme="e">Waves, Light and Sound</li>
 	                <li><a href="#huygens_principle" data-rel="dialog" data-transition="pop"><h2>Huygens' Principle</h2><p>Every point on a wavefront may be considered as a source of secondary spherical wavelets, which spread out in all directions at the same speed as the wave itself.</p></a></li>
 	                <li><a href="#reflection" data-rel="dialog" data-transition="pop"><h2>Reflection</h2><p>The change in direction of a wavefront as it hits a barrier. (The wavefront does not travel through the interface but is reflected back through the same media.)</p></a></li>
@@ -238,6 +248,76 @@
             
          </div>
          
+         <div data-role="page" id="work">
+            <div data-role="header" data-theme="d">
+            <h1>Work</h1>           
+            </div>
+            <div data-role="content">
+                <p>Work is done on an object if an applied force causes a displacement of the object.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="potential_energy">
+            <div data-role="header" data-theme="d">
+            <h1>Potential Energy</h1>           
+            </div>
+            <div data-role="content">
+                <p>The energy an object possesses as a result of its position in a field, in this case, the gravitational field. (The ability to do work)</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="kinetic_energy">
+            <div data-role="header" data-theme="d">
+            <h1>Kinetic Energy</h1>           
+            </div>
+            <div data-role="content">
+                <p>The energy an object possesses due to its motion. (The work needed to accelerate a body of a given mass from rest to its stated velocity.)</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="power">
+            <div data-role="header" data-theme="d">
+            <h1>Power</h1>           
+            </div>
+            <div data-role="content">
+                <p>Power is the rate at which work is done.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="mechanical_energy">
+            <div data-role="header" data-theme="d">
+            <h1>Mechanical Energy</h1>           
+            </div>
+            <div data-role="content">
+                <p>Mechanical energy is the sum of the potential energy and the kinetic energy of an object or system.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="mechanical_energy_law">
+            <div data-role="header" data-theme="d">
+            <h1>Law of the conservation of mechanical energy</h1>           
+            </div>
+            <div data-role="content">
+                <p>The total mechanical energy of an isolated system remains constant in magnitude.</p>
+            </div>
+            
+         </div>
+         
+         <div data-role="page" id="work_energy">
+            <div data-role="header" data-theme="d">
+            <h1>Work-Energy Principle</h1>           
+            </div>
+            <div data-role="content">
+                <p>The net work done on an object by the net or resultant force, equals the change in kinetic energy of the object.</p>
+            </div>
+            
+         </div>
+         
          
          <!-- <div data-role="page" id="">
             <div data-role="header" data-theme="d">
@@ -280,7 +360,7 @@
                     <br> 
                     <span id="y_axis"></span>
                     </p>
-                    <p><a target="_blank" href="canvas.html">Go to the canvas!</a></p>
+                    
                     <input type="file" id="take-picture" accept="image/*;capture=camera"/>
                     <canvas id="projectile" width="280" height="300"></canvas>
                     
@@ -352,7 +432,326 @@
 
 <p><u><b>Negative</b></u> work values indicate transfer of energy <u><b>out</b></u> of the system!<br><u><b>Positive</b></u> work values indicate transfer of energy <u><b>into</b></u> the system!</p>
 
+                    <br>
+                    
+                    </p>
+                    
+                    <p>
+                    
+<h2>Potential Energy</h2>
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">The energy an object possesses as a result of its position in a field, in this case, the gravitational field. (The ability to do work)</p>
+
+<math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>E</mi>
+     <mi>p</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mi mathvariant="italic">mgh</mi>
+   </mrow>
+  </mrow>
+</math>
+
+
+
                         
+                    </p>
+                    
+                    <br>
+                    
+                    <p>
+                    
+<h2>Kinetic Energy</h2>
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">The energy an object possesses due to its motion. (The work needed to accelerate a body of a given mass from rest to its stated velocity.)</p>
+
+<math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>E</mi>
+     <mi>k</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mn>1</mn>
+     <mn>2</mn>
+    </mfrac>
+   </mrow>
+   <msup>
+    <mi mathvariant="italic">mv</mi>
+    <mn>2</mn>
+   </msup>
+  </mrow>
+</math>
+
+                    
+                    </p>
+                    
+                    <br>
+                    
+                    <p>
+                    
+<h2>Power</h2>
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">Power is the rate at which work is done.</p>
+
+<math>
+  <mrow>
+   <mrow>
+    <mi>P</mi>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mi>W</mi>
+     <mrow>
+      <mo stretchy="false">Δ</mo>
+      <mi>t</mi>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </mrow>
+</math>
+
+<p>P: Power in watts (W)</p>
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">One watt is the power if work of one joule is done in one second.</p>
+
+                    
+                    </p>
+                    
+                    <br>
+                    
+                    <p>
+                    
+<h2>Mechanical Energy</h2>
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">Mechanical energy is the sum of the potential energy and the kinetic energy of an object or system.</p>
+
+<math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>E</mi>
+     <mi>M</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <msub>
+      <mi>E</mi>
+      <mi>p</mi>
+     </msub>
+     <mo stretchy="false">+</mo>
+     <msub>
+      <mi>E</mi>
+      <mi>k</mi>
+     </msub>
+    </mrow>
+   </mrow>
+  </mrow>
+</math>
+
+<br>
+<br>
+
+<h2 style="text-align: center;">Law of the conservation of mechanical energy</h2>
+
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">The total mechanical energy of an isolated system remains constant in magnitude.</p>
+
+<p>
+<h3>No friction:</h3>
+<math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mrow>
+      <mo stretchy="false">(</mo>
+      <mrow>
+       <mrow>
+        <msub>
+         <mi>E</mi>
+         <mi>p</mi>
+        </msub>
+        <mo stretchy="false">+</mo>
+        <msub>
+         <mi>E</mi>
+         <mi>k</mi>
+        </msub>
+       </mrow>
+      </mrow>
+      <mo stretchy="false">)</mo>
+     </mrow>
+     <mi>A</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <msub>
+     <mrow>
+      <mo stretchy="false">(</mo>
+      <mrow>
+       <mrow>
+        <msub>
+         <mi>E</mi>
+         <mi>p</mi>
+        </msub>
+        <mo stretchy="false">+</mo>
+        <msub>
+         <mi>E</mi>
+         <mi>k</mi>
+        </msub>
+       </mrow>
+      </mrow>
+      <mo stretchy="false">)</mo>
+     </mrow>
+     <mi>B</mi>
+    </msub>
+   </mrow>
+  </mrow>
+</math>
+
+<h3>Friction:</h3>
+<math>
+  <mrow>
+   <mo stretchy="false">Δ</mo>
+   <mrow>
+    <msub>
+     <mi>E</mi>
+     <mi>M</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mrow>
+     <msub>
+      <mrow>
+       <mo stretchy="false">(</mo>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>E</mi>
+          <mi>p</mi>
+         </msub>
+         <mo stretchy="false">+</mo>
+         <msub>
+          <mi>E</mi>
+          <mi>k</mi>
+         </msub>
+        </mrow>
+       </mrow>
+       <mo stretchy="false">)</mo>
+      </mrow>
+      <mi>f</mi>
+     </msub>
+     <mo stretchy="false">−</mo>
+     <msub>
+      <mrow>
+       <mo stretchy="false">(</mo>
+       <mrow>
+        <mrow>
+         <msub>
+          <mi>E</mi>
+          <mi>p</mi>
+         </msub>
+         <mo stretchy="false">+</mo>
+         <msub>
+          <mi>E</mi>
+          <mi>k</mi>
+         </msub>
+        </mrow>
+       </mrow>
+       <mo stretchy="false">)</mo>
+      </mrow>
+      <mi>i</mi>
+     </msub>
+    </mrow>
+   </mrow>
+  </mrow>
+</math>
+Mechanical energy not conserved!
+<math>
+  <mrow>
+   <mo stretchy="false">Δ</mo>
+   <mrow>
+    <msub>
+     <mi>E</mi>
+     <mi>M</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <msub>
+     <mi>W</mi>
+     <mi>f</mi>
+    </msub>
+   </mrow>
+  </mrow>
+</math>
+
+</p>
+
+
+                    
+                    </p>
+                    
+                    <br>
+                    
+                    <p>
+                    
+<h2>The Work-Energy Principle</h2>
+<p style="background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;">The net work done on an object by the net or resultant force, equals the change in kinetic energy of the object.</p>
+
+<h3>First write this formula:</h3>
+
+<math>
+  <mrow>
+   <mrow>
+    <msub>
+     <mi>W</mi>
+     <mi mathvariant="italic">net</mi>
+    </msub>
+    <mo stretchy="false">=</mo>
+    <mo stretchy="false">Δ</mo>
+   </mrow>
+   <msub>
+    <mi>E</mi>
+    <mi>k</mi>
+   </msub>
+  </mrow>
+</math>
+
+<br>
+<h3>Then break it down:</h3>
+
+
+<math>
+  <mrow>
+   <msub>
+    <mi>F</mi>
+    <mi mathvariant="italic">net</mi>
+   </msub>
+   <mo stretchy="false">Δ</mo>
+   <mi>x</mi>
+   <mi>cos</mi>
+   <mrow>
+    <mo stretchy="false">θ</mo>
+    <mo stretchy="false">=</mo>
+    <mfrac>
+     <mn>1</mn>
+     <mn>2</mn>
+    </mfrac>
+   </mrow>
+   <mrow>
+    <msubsup>
+     <mi mathvariant="italic">mv</mi>
+     <mi>f</mi>
+     <mn>2</mn>
+    </msubsup>
+    <mo stretchy="false">−</mo>
+    <mfrac>
+     <mn>1</mn>
+     <mn>2</mn>
+    </mfrac>
+   </mrow>
+   <msubsup>
+    <mi mathvariant="italic">mv</mi>
+    <mi>i</mi>
+    <mn>2</mn>
+   </msubsup>
+  </mrow>
+</math>
+
                     
                     </p>
                     
