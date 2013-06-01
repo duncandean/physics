@@ -21,7 +21,7 @@
         <script type="text/paperscript" canvas="projectile1">
             
                        
-            var building_height = 10;
+            var building_height = 30;
             var building_left = new Point(0, 50);
             var building_corner = new Point(80, 50);
             var building_floor = new Point(80, view.size.height);
@@ -52,7 +52,7 @@
                 var velocity = gravity * event.time * pixelsPerMetre;
                 ball.position.y += velocity/(1/event.delta);
                 
-                if (ball.position.y > view.size.height - 12){
+                if (ball.position.y > view.size.height - 16){
                     gravity = 0;
                 }
             
