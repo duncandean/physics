@@ -27,6 +27,9 @@
             var building_floor = new Point(80, view.size.height);
             var building = new Path(building_left, building_corner, building_floor);
             
+            var pixelsPerMetre = (view.size.height - 50)/building_height;
+            var gravity = 9.81;
+            
             building.strokeColor = 'white';
             
             var boy_head = new Path.Circle(new Point(60, 5), 5);
@@ -35,8 +38,25 @@
             boy_body.strokeColor = 'white';
             var boy_arms = new Path(new Point(50, 25), new Point(82, 10));
             boy_arms.strokeColor = 'white';
+            var ground = new Path(new Point(0, view.size.height), new Point(view.size.width, view.size.height));
+            ground.strokeColor = 'white';
+            ground.strokeWidth = 5;
             
+            var ball = new Path.Circle(new Point(100, 35), 10);
+            ball.fillColor = 'red';
+            ball.strokeColor = 'black';
+            ball.strokeWidth = 3;
             
+            function onFrame(event) {
+            
+                var velocity = gravity * event.time * pixelsPerMetre;
+                ball.position.y += velocity/(1/event.delta);
+                
+                if (ball.position.y > view.size.height - 16){
+                    gravity = 0;
+                }
+            
+            }
             
             
         
