@@ -51,7 +51,7 @@
             
                 var velocity = gravity * event.time * pixelsPerMetre;
                 ball.position.y += velocity/(1/event.delta);
-                
+                console.log(velocity/pixelsPerMetre);
                 if (ball.position.y > view.size.height - 16){
                     gravity = 0;
                 }
