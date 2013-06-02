@@ -52,7 +52,7 @@
             
             count = 0;
             
-            $('canvas').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition;}});
+            $('canvas').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81;}});
             
             
             function onFrame(event) {
