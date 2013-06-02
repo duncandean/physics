@@ -57,7 +57,8 @@
             
             function onFrame(event) {
             
-                
+                ball.fillColor.hue += 1;
+                ball.opacity = ((Math.sin(event.count/20)+1)/2);
                 if (start){
                 
                     var realTime = event.time - count;
