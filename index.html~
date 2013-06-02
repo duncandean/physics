@@ -20,7 +20,8 @@
         <script type="text/javascript" src="./paper.js"></script>
         <script type="text/paperscript" canvas="projectile1">
             
-                       
+            var start = false;
+            $('canvas').click(function(){start = true;});        
             var building_height = 8;
             var building_left = new Point(0, 50);
             var building_corner = new Point(80, 50);
