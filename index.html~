@@ -21,7 +21,7 @@
         <script type="text/paperscript" canvas="projectile1">
             
             var start = false;
-            $('canvas').click(function(){start = true;});        
+            $('canvas').click(function(e){e.preventDefault(); start = true;});        
             var building_height = 8;
             var building_left = new Point(0, 50);
             var building_corner = new Point(80, 50);
@@ -48,9 +48,17 @@
             ball.strokeColor = 'black';
             ball.strokeWidth = 3;
             
+            count = 0;
+            
             function onFrame(event) {
+            
+                
                 if (start){
-                var velocity = gravity * event.time * pixelsPerMetre;
+                
+                var realTime = event.time - count;
+                
+                
+                var velocity = gravity * realTime * pixelsPerMetre;
                 ball.position.y += velocity/(1/event.delta);
 
                 $('#velocity1').html((Math.floor((velocity/pixelsPerMetre) * 100) / 100).toFixed(2));
@@ -58,6 +66,10 @@
                     gravity = 0;
                     
                 }
+                }
+                else {
+                    count = event.time;
+                    
                 }
             
             }

@@ -48,16 +48,28 @@
             ball.strokeColor = 'black';
             ball.strokeWidth = 3;
             
+            count = 0;
+            
             function onFrame(event) {
+            
+                
                 if (start){
-                var velocity = gravity * event.time * pixelsPerMetre;
+                
+                var realTime = event.time - count;
+                
+                
+                var velocity = gravity * realTime * pixelsPerMetre;
                 ball.position.y += velocity/(1/event.delta);
 
                 $('#velocity1').html((Math.floor((velocity/pixelsPerMetre) * 100) / 100).toFixed(2));
                 if (ball.position.y > view.size.height - 16){
                     gravity = 0;
                     
+                    }
                 }
+                else {
+                    count = event.time;
+                    
                 }
             
             }
