@@ -21,7 +21,7 @@
         <script type="text/paperscript" canvas="projectile1">
             
             var start = false;
-            $('canvas').click(function(e){e.preventDefault(); start = true;});        
+                    
             var building_height = 8;
             var building_left = new Point(0, 50);
             var building_corner = new Point(80, 50);
@@ -47,30 +47,36 @@
             ball.fillColor = 'red';
             ball.strokeColor = 'black';
             ball.strokeWidth = 3;
+            var originalPosition = ball.position.y;
+            
             
             count = 0;
+            
+            $('canvas').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81;}});
+            
             
             function onFrame(event) {
             
                 
                 if (start){
                 
-                var realTime = event.time - count;
+                    var realTime = event.time - count;
                 
                 
-                var velocity = gravity * realTime * pixelsPerMetre;
-                ball.position.y += velocity/(1/event.delta);
+                    var velocity = gravity * realTime * pixelsPerMetre;
+                    ball.position.y += velocity/(1/event.delta);
 
-                $('#velocity1').html((Math.floor((velocity/pixelsPerMetre) * 100) / 100).toFixed(2));
-                if (ball.position.y > view.size.height - 16){
-                    gravity = 0;
+                    $('#velocity1').html((Math.floor((velocity/pixelsPerMetre) * 100) / 100).toFixed(2));
+                    if (ball.position.y > view.size.height - 16){
+                        gravity = 0;
                     
+                        }
                     }
-                }
-                else {
+                    
+                 else {
                     count = event.time;
                     
-                }
+                    }
             
             }
             
