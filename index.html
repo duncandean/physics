@@ -20,7 +20,8 @@
         <script type="text/javascript" src="./paper.js"></script>
         <script type="text/paperscript" canvas="projectile1">
             
-                       
+            var start = false;
+            $('body').click(function(){start = true;});        
             var building_height = 8;
             var building_left = new Point(0, 50);
             var building_corner = new Point(80, 50);
@@ -48,7 +49,7 @@
             ball.strokeWidth = 3;
             
             function onFrame(event) {
-            
+                if (start){
                 var velocity = gravity * event.time * pixelsPerMetre;
                 ball.position.y += velocity/(1/event.delta);
 
@@ -56,6 +57,7 @@
                 if (ball.position.y > view.size.height - 16){
                     gravity = 0;
                     
+                }
                 }
             
             }
