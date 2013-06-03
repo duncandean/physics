@@ -49,15 +49,18 @@
             ball.strokeWidth = 3;
             var originalPosition = ball.position.y;
             
-            
+            var initial_velocity = 0;
             var count = 0;
             
             $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81;}});
             $('#projectile1_set_values').click(function(){
+              
+              
+                initial_velocity = parseFloat($('#initial_velocity').val());
                 building_height = parseFloat($('#wall_height').val());
-                console.log(building_height);
                 pixelsPerMetre = (view.size.height - 50)/building_height;
-                console.log(pixelsPerMetre);
+                
+             
                 
             
             
@@ -85,9 +88,9 @@
                 if (start){
                     wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
-                    var final_value = (Math.floor(Math.sqrt(2*9.81*building_height) * 100) / 100).toFixed(2).toString();
+                    var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
                 
-                    var velocity = gravity * realTime * pixelsPerMetre;
+                    var velocity = (gravity * realTime * pixelsPerMetre) + (initial_velocity * pixelsPerMetre);
                     ball.position.y += velocity/(1/event.delta);
 
                    
@@ -149,11 +152,29 @@
             
             $('#projectile2').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position = originalPosition; gravity = 9.81; initial_velocity = 6;}});
             
+            $('#projectile2_set_values').click(function(){
+                building_height = parseFloat($('#wall_height2').val());
+                initial_velocity = parseFloat($('#initial_velocity2').val());
+                
+                pixelsPerMetre = (view.size.height - 90)/building_height;
+                
+                
+            
+            
+            });
+            
+            var wall_height_text = new PointText({
+                point: [30, 160],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
             function onFrame(event) {
             
                 ball.fillColor.hue += 1;
                 if (start) {
                     
+                    wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
                     console.log(realTime);
                     var velocity = (gravity * realTime * pixelsPerMetre) - (initial_velocity * pixelsPerMetre);
@@ -504,13 +525,20 @@
                     
                     <label for="wall_height">Wall height</label>
                     <input class="projectile1_values" type="text" id="wall_height" />
-                    <!--<label for="initial_velocity">Initial velocity</label>
-                    <input class="projectile1_values" type="text" id="initial_velocity" />-->
-                    
+                    <label for="initial_velocity1">Initial velocity</label>
+                    <input class="projectile1_values" type="text" id="initial_velocity" />
                     <input id="projectile1_set_values" type="submit" value="Submit" />
+                    
                     <br>
                     <br>
+                    
                     <canvas id="projectile2" width="280" height="300"></canvas>
+                    
+                    <label for="wall_height">Wall height</label>
+                    <input class="projectile2_values" type="text" id="wall_height2" />
+                    <label for="initial_velocity1">Initial velocity</label>
+                    <input class="projectile2_values" type="text" id="initial_velocity2" />
+                    <input id="projectile2_set_values" type="submit" value="Submit" />
                     
                     </p>
                     
