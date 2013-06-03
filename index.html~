@@ -52,22 +52,42 @@
             
             count = 0;
             
-            $('canvas').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81;}});
+            $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81;}});
+            $('#projectile1_set_values').click(function(){
+                building_height = parseFloat($('#wall_height').val());
+                console.log(building_height);
+                pixelsPerMetre = (view.size.height - 50)/building_height;
+                console.log(pixelsPerMetre);
+                
             
+            
+            });
+            
+            var final_velocity = new PointText({
+                point: [view.size.width - 160, 40],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
+            
+                    
             
             function onFrame(event) {
             
                 ball.fillColor.hue += 1;
-                ball.opacity = ((Math.sin(event.count/20)+1)/2);
+                //ball.opacity = ((Math.sin(event.count/20)+1)/2);
                 if (start){
                 
                     var realTime = event.time - count;
-                
+                    var final_value = (Math.floor(Math.sqrt(2*9.81*building_height) * 100) / 100).toFixed(2).toString();
                 
                     var velocity = gravity * realTime * pixelsPerMetre;
                     ball.position.y += velocity/(1/event.delta);
 
-                    $('#velocity1').html((Math.floor((velocity/pixelsPerMetre) * 100) / 100).toFixed(2));
+                   
+                                        
+                    final_velocity.content = 'Final Velocity: ' + final_value + ' m/s';
+                    
                     if (ball.position.y > view.size.height - 16){
                         gravity = 0;
                     
@@ -405,9 +425,18 @@
                 <div data-role="content">
                     <h1>Projectile Motion</h1>
                     <p>
-                    <span id="velocity1"></span>
-                    <br>
+                    <h2>Scenario 1</h2>
+                    
+                    
                     <canvas id="projectile1" width="280" height="300"></canvas>
+                    
+                    <label for="wall_height">Wall height</label>
+                    <input class="projectile1_values" type="text" id="wall_height" />
+                    <label for="initial_velocity">Initial velocity</label>
+                    <input class="projectile1_values" type="text" id="initial_velocity" />
+                    
+                    <input id="projectile1_set_values" type="submit" value="Submit" />
+                    
                     </p>
                     
                     
