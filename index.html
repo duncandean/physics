@@ -99,6 +99,7 @@
                     
                     if (ball.position.y > view.size.height - 16){
                         gravity = 0;
+                        initial_velocity = 0;
                     
                         }
                     }
@@ -148,7 +149,7 @@
             
             var count = 0;
             
-            initial_velocity = 6;
+            var initial_velocity = 6;
             
             $('#projectile2').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position = originalPosition; gravity = 9.81; initial_velocity = 6;}});
             

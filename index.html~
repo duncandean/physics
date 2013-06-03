@@ -55,36 +55,12 @@
             $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81;}});
             $('#projectile1_set_values').click(function(){
               
-              if ($('#initial_velocity').val().length === 0) {
-                if ($('#wall_height').val().length === 0) {
-                    initial_velocity = 0;
-                    building_height = 8;
-                    pixelsPerMetre = (view.size.height - 50)/building_height;
-                }
-                else {
-                    building_height = parseFloat($('#wall_height').val());
-                    pixelsPerMetre = (view.size.height - 50)/building_height;
-                    
-                }
-               
-              }
               
-              else if ($('#wall_height').val().length === 0) {
-                if ($('#initial_velocity').val().length === 0) {
-                    initial_velocity = 0;
-                    building_height = 8;
-                    pixelsPerMetre = (view.size.height - 50)/building_height;
-                }
-                else {
-                    initial_velocity = parseFloat($('#initial_velocity').val());
-                }
-              }
-              else {
                 initial_velocity = parseFloat($('#initial_velocity').val());
                 building_height = parseFloat($('#wall_height').val());
                 pixelsPerMetre = (view.size.height - 50)/building_height;
                 
-              }
+             
                 
             
             
@@ -123,6 +99,7 @@
                     
                     if (ball.position.y > view.size.height - 16){
                         gravity = 0;
+                        initial_velocity = 0;
                     
                         }
                     }
