@@ -69,6 +69,12 @@
                 fontSize: 16
             });
             
+            var wall_height_text = new PointText({
+                point: [30, 100],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
             
                     
             
@@ -77,7 +83,7 @@
                 ball.fillColor.hue += 1;
                 //ball.opacity = ((Math.sin(event.count/20)+1)/2);
                 if (start){
-                
+                    wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
                     var final_value = (Math.floor(Math.sqrt(2*9.81*building_height) * 100) / 100).toFixed(2).toString();
                 
@@ -432,8 +438,8 @@
                     
                     <label for="wall_height">Wall height</label>
                     <input class="projectile1_values" type="text" id="wall_height" />
-                    <label for="initial_velocity">Initial velocity</label>
-                    <input class="projectile1_values" type="text" id="initial_velocity" />
+                    <!--<label for="initial_velocity">Initial velocity</label>
+                    <input class="projectile1_values" type="text" id="initial_velocity" />-->
                     
                     <input id="projectile1_set_values" type="submit" value="Submit" />
                     
@@ -969,7 +975,7 @@ Mechanical energy not conserved!
                     <p>
                         <ul>
                             <li><a data-transition="pop" data-rel="dialog" href="#reflection"><strong>Reflection</strong></a></li>
-                            <li><strong>Interference</strong><p><a data-transition="pop" data-rel="dialog" href="#coherent_sources">Coherent sources</a> that are next to each other can produce disturbances with the same frequency, resulting in an overlapping of waves. This is known as a <a data-transition="pop" data-rel="dialog" href="#superpositioning" >superposition</a> of waves. This superpositioning results in interference.</p><img src="http://upload.wikimedia.org/wikipedia/commons/2/2c/Two_sources_interference.gif" /><p>Two types of interference can occur:</p><p><u><strong><em>Constructive Interference</em></strong></u><p>Occurs when a crest and a crest/ trough and a trough meet.<ul><li>Two in phase pulses approach each other from opposite directions.</li><li>When the pulses meet, the displacement is the vector sum of both of them.</li><li>After interference, the pulses keep moving in their original directions of motion.</li></ul></p></p><p><u><strong><em>Destructive Interference</em></strong></u><p></p>Occurs when a crest and a trough meet.<ul><li>A positive and a negative pulse approach each other from opposite directions. (Out of phase)</li><li>When the pulses meet, the displacement is the vector sum of the two. (If the pulses have the same amplitude they cancel out.)</li><li>After interfering, the pulses continue in their original directions of motion.</li></ul></p><img src="http://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif" width="100%"/><p>Example animation: When the blue and red waves are in phase, constructive interference occurs resulting in the larger black wave. When the blue and red waves are out of phase, destructive interference occurs resulting in a black wave with zero displacement.</p></li><li><a  data-rel="dialog" href="#refraction"data-transition="pop" ><strong>Refraction</strong></a></li><li><strong><a data-rel="dialog" href="#diffraction" data-transition="pop" >Diffraction</a> of waves</strong><p>Waves possess the ability to bend around the edges of an obstacle.</p><p>Waves can also bend around edges of an opening in a barrier as shown below.</p><img src="https://gcps.desire2learn.com/d2l/lor/viewer/viewFile.d2lfile/6605/4515/diffraction%20animation.gif" width="200px" /><p>Maximum diffraction will occur when the width of the opening is equal to the width of the wavelength.</p><p>The degree of diffraction is influenced by:</p><ul><li>the wavelength (λ) - a <u>longer wavelength</u> results in a <u>greater degree of diffraction</u></li><li>the width of the opening - a <u>narrower opening</u> results in a <u>greater degree of diffraction</u></li><li>Therefore: degree of diffraction<math>
+                            <li><strong>Interference</strong><p><a data-transition="pop" data-rel="dialog" href="#coherent_sources">Coherent sources</a> that are next to each other can produce disturbances with the same frequency, resulting in an overlapping of waves. This is known as a <a data-transition="pop" data-rel="dialog" href="#superpositioning" >superposition</a> of waves. This superpositioning results in interference.</p><img src="http://upload.wikimedia.org/wikipedia/commons/2/2c/Two_sources_interference.gif" /><p>Two types of interference can occur:</p><p><u><strong><em>Constructive Interference</em></strong></u><p>Occurs when a crest and a crest/ trough and a trough meet.<ul><li>Two in phase pulses approach each other from opposite directions.</li><li>When the pulses meet, the displacement is the vector sum of both of them.</li><li>After interference, the pulses keep moving in their original directions of motion.</li></ul></p></p><p><u><strong><em>Destructive Interference</em></strong></u><p></p>Occurs when a crest and a trough meet.<ul><li>A positive and a negative pulse approach each other from opposite directions. (Out of phase)</li><li>When the pulses meet, the displacement is the vector sum of the two. (If the pulses have the same amplitude they cancel out.)</li><li>After interfering, the pulses continue in their original directions of motion.</li></ul></p><img src="http://upload.wikimedia.org/wikipedia/commons/7/7d/Standing_wave_2.gif" width="100%"/><p>Example animation: When the blue and red waves are in phase, constructive interference occurs resulting in the larger black wave. When the blue and red waves are out of phase, destructive interference occurs resulting in a black wave with zero displacement.</p></li><li><a  data-rel="dialog" href="#refraction"data-transition="pop" ><strong>Refraction</strong></a></li><li><strong><a data-rel="dialog" href="#diffraction" data-transition="pop" >Diffraction</a> of waves</strong><p>Waves possess the ability to bend around the edges of an obstacle.</p><p>Waves can also bend around edges of an opening in a barrier as shown below.</p><img src="./images/diffraction-animation.gif" width="200px" /><p>Maximum diffraction will occur when the width of the opening is equal to the width of the wavelength.</p><p>The degree of diffraction is influenced by:</p><ul><li>the wavelength (λ) - a <u>longer wavelength</u> results in a <u>greater degree of diffraction</u></li><li>the width of the opening - a <u>narrower opening</u> results in a <u>greater degree of diffraction</u></li><li>Therefore: degree of diffraction<math>
   <mrow>
    <mo stretchy="false">α</mo>
    <mfrac>
