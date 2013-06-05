@@ -17,6 +17,7 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="apple-touch-icon" href="./touch.png"/>
         <link rel="apple-touch-startup-image" href="./startup.png">
+        <script type="text/javascript" src="https://apigee.com/usergrid/sdk/usergrid.0.10.5.js" ></script>
         <script type="text/javascript" src="./paper.js"></script>
         <script type="text/paperscript" canvas="projectile1">
           
@@ -60,8 +61,44 @@
                 building_height = parseFloat($('#wall_height').val());
                 pixelsPerMetre = (view.size.height - 50)/building_height;
                 
-             
                 
+                function saveData(){    
+    //Initialize our client
+    var client = new Usergrid.Client({
+        orgName:"duncandean",
+        appName:"sandbox"
+    });
+    
+    //In our options object we set the type of the entitiy
+    //and we also set any data that goes along with it
+    //in this case it's the books title.
+    var options = {
+        name: "Query: " + new Date(),
+        type:"value",
+        initial_velocity: $('#initial_velocity').val(),
+        height: $('#wall_height').val()
+    };
+    
+    //Let's create our entity, and display the results
+    //of the creation in the html element with the id of response
+    client.createEntity(options, function(error, value){
+        if(error) {
+            //error saving book
+            
+        } else {
+            //book saved successfully
+            //Use book.get() here to get the properties from the object we just created!
+            var uuid = value.get("uuid");
+            var author = value.get("author");
+            var title = value.get("title");
+            
+            
+        }
+    }); 
+}
+
+saveData();
+
             
             
             });
@@ -177,7 +214,7 @@
                     
                     wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
-                    console.log(realTime);
+                    
                     var velocity = (gravity * realTime * pixelsPerMetre) - (initial_velocity * pixelsPerMetre);
                     ball.position.y += velocity/(1/event.delta);
                      if (ball.position.x < view.size.width/2 + 20){
@@ -193,7 +230,7 @@
                 
                 else {
                     count = event.time;
-                    console.log(count);
+                    
                 } 
             
             }
