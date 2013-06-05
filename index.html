@@ -268,7 +268,7 @@ saveData();
         <!-- Home Page -->
         <div data-role="page" id="home">
             <div data-role="content">
-                <div id="logo" style="text-align: center"><h1>Physics!</h1></div>
+                <div id="logo" style="text-align: center"><h1>Physics!</h1><a data-role="button" data-rel="dialog" data-theme="b" href="#sign_in">Sign In</a></div>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
                     <li data-theme="a"><a href="#module1_index" data-transition="slide">Module 1: Mechanics</a></li>
@@ -283,6 +283,22 @@ saveData();
         </div>
         
         <!-- Do not change! -->
+        <!-- Sign in dialog -->
+        
+        <div data-role="page" id="sign_in">
+            <div data-role="header" data-theme="e">
+                <h1>Sign in</h1>
+            </div>
+            <div data-role="content">
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
+                <input data-theme="e" type="submit" value="Sign In" />
+                <br>
+                <br>
+                <a data-theme="b" href="register" data-role="button" data-rel="dialog">No account? -> Register</a>
+            </div>        
+        </div>
+                
         <!-- About -->
         
         <div data-role="page" id="about">
@@ -2199,4 +2215,4 @@ Mechanical energy not conserved!
     </body>  
 
 
-</html>0
+</html>
