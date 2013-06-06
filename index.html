@@ -51,20 +51,34 @@
                                         if(error) {
                                             alert("There was an error with retrieving your user!");
                                         } else {
-          
-                                            var name = user.get("username");
+                                            
+                                            var picture = user.get("picture");
+                                            var name = user.get("name");
+                                            var username = user.get("username");
                                             $('#greeting').html("Hello " + name + "!");
+                                            $('#profilePicture').attr('src', picture);
+                                            $('#profileName').html(name);
+                                            $('#profileUsername').html(username);
+                                            
+                                            
+                                            
                                         }
                                        });
                                     
                                     
                                 
-                                    $.mobile.changePage("#home",{allowSamePageTransition: true });
+                                    
                                     $('#signButton').css('display', 'none');
                                     $('#signOutButton').css('display', 'block');
+                                    $('#profileLink').css('display', 'block');
                                     
-                                    $('#signUsername').val('');
-                                    $('#signPassword').val('');
+                                    
+                                    window.setTimeout(function(){
+                                        $.mobile.changePage("#home",{allowSamePageTransition: true });
+                                        $('#signUsername').val('');
+                                        $('#signPassword').val('');
+                                        }, 1000);
+                                    
                                     
                                     
                                 }
@@ -134,6 +148,7 @@
                                         } else {
                                             $('#signButton').css('display', 'block');
                                             $('#signOutButton').css('display', 'none');
+                                            $('#profileLink').css('display', 'none');
                                             $('#greeting').html('');
                                         }
                             }
@@ -212,7 +227,7 @@
             function onFrame(event) {
             
                 ball.fillColor.hue += 1;
-                //ball.opacity = ((Math.sin(event.count/20)+1)/2);
+    
                 if (start){
                     wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
@@ -359,7 +374,7 @@
         <!-- Home Page -->
         <div data-role="page" id="home">
             <div data-role="content">
-                <div id="logo" style="text-align: center"><h1>Physics!</h1><h2 id="greeting"></h2><a id="signButton" data-role="button" data-rel="dialog" data-theme="b" href="#sign_in">Sign In</a><a id="signOutButton" style="display:none;" data-role="button" data-rel="dialog" data-theme="e" >Sign Out</a></div>
+                <div id="logo" style="text-align: center"><h1>Physics!</h1><h2 id="greeting" style="color: red; text-shadow: 2px 2px 2px black;"></h2><a id="signButton" data-role="button" data-rel="dialog" data-theme="b" href="#sign_in">Sign In</a><a id="signOutButton" style="display:none;" data-role="button" data-theme="b">Sign Out</a><a id="profileLink" href="#profile" style="display:none;" data-role="button" data-theme="e" >Profile</a></div>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
                     <li data-theme="a"><a href="#module1_index" data-transition="slide">Module 1: Mechanics</a></li>
@@ -398,12 +413,27 @@
             </div>
             <div data-role="content">
                 <input id="regName" type="text" placeholder="Name"/>
-                <input id="regSurname" type="text" placeholder="Surname" />
                 <input id="regUsername" type="text" placeholder="Username"/>
                 <input id="regEmail" type="email" placeholder="Email"/>
                 <input id="regPassword" type="password" placeholder="Password" />
-                <input id="regPasswordRepeat" type="password" placeholder="Repeat Password" />
                 <input id="regSubmit" type="submit" value="Register" />
+            </div>
+        </div>
+        
+        <!-- Profile Page -->
+        
+        <div data-role="page" id="profile">
+            <div data-role="header" data-theme="c"><a data-role="button" href="#home">Back</a>
+                <h1>Your Profile</h1>
+            </div>
+            <div data-role="content">
+                <h1 id="profileName"></h1>
+                <img id="profilePicture" />
+                <h3>Your username is <strong><span id="profileUsername"></span></strong></h3>
+                <br>
+                <br>
+                <p>Change your profile picture on <a target="_blank" href="https://gravatar.com">Gravatar.com</a>!</p>
+                
             </div>
         </div>
                 
