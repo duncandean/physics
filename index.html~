@@ -17,8 +17,138 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="apple-touch-icon" href="./touch.png"/>
         <link rel="apple-touch-startup-image" href="./startup.png">
-        <script type="text/javascript" src="https://apigee.com/usergrid/sdk/usergrid.0.10.5.js" ></script>
+        <script type="text/javascript" src="./apigee/usergrid.js" ></script>
         <script type="text/javascript" src="./paper.js"></script>
+        
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+            //Click event listeners...
+            
+                        
+                //Login...
+                
+                    $('#signSubmit').click(function(event){
+                    
+                        event.preventDefault();
+                                                
+                        function signInUser(){
+                            var client = new Usergrid.Client({
+                                orgName: 'duncandean',
+                                appName: 'physics'
+                            });    
+                            
+                            var username = $('#signUsername').val();
+                            var password = $('#signPassword').val();
+                            
+                            client.login(username, password, function(error){
+                                if (error){
+                                    alert('Username and Password do not match!');
+                                } 
+                                
+                                else {
+                                     client.getLoggedInUser(function(error, data, user){
+                                        if(error) {
+                                            alert("There was an error with retrieving your user!");
+                                        } else {
+          
+                                            var name = user.get("username");
+                                            $('#greeting').html("Hello " + name + "!");
+                                        }
+                                       });
+                                    
+                                    
+                                
+                                    $.mobile.changePage("#home",{allowSamePageTransition: true });
+                                    $('#signButton').css('display', 'none');
+                                    $('#signOutButton').css('display', 'block');
+                                    
+                                    $('#signUsername').val('');
+                                    $('#signPassword').val('');
+                                    
+                                    
+                                }
+                            
+                            });
+                            
+                        }
+                        
+                        signInUser();
+                        
+                    });
+                    
+                //Register...
+                
+                    $('#regSubmit').click(function(){
+                        
+                        function signUpUser(){
+                            var client = new Usergrid.Client({
+                                orgName: 'duncandean',
+                                appName: 'physics'
+                                
+                            });    
+                        
+                            var username = $('#regUsername').val();
+                            var password = $('#regPassword').val();
+                            var email = $('#regEmail').val();
+                            var name = $('#regName').val();
+                        
+                            client.signup(username, password, email, name, function(error){
+                            
+                                if (error) {
+                                    alert('An error occurred!');
+                                } else {
+                                    alert('User created!');
+                                    $('#regUsername').val('');
+                                    $('#regPassword').val('');
+                                    $('#regEmail').val('');
+                                    $('#regName').val('');
+                                    $.mobile.changePage("#home",{allowSamePageTransition: true });
+                                    $('#greeting').html('User created! Sign in now');
+                                }
+                            
+                            });
+                        
+                        }
+                        
+                        signUpUser();
+                    });
+                    
+                //Sign Out...
+                
+                    $('#signOutButton').click(function(event){
+                       
+                            event.preventDefault();
+                       
+                            function signOutUser(){
+                                    
+                                    var client = new Usergrid.Client({
+                                        orgName: 'duncandean',
+                                        appName: 'physics'
+                                    }); 
+                                                      
+                                    client.logout();
+
+                                        if (client.isLoggedIn()) {
+                                            alert("Error occurred!");
+                                        } else {
+                                            $('#signButton').css('display', 'block');
+                                            $('#signOutButton').css('display', 'none');
+                                            $('#greeting').html('');
+                                        }
+                            }
+                       
+                            signOutUser();
+                            
+                            
+                            
+                       
+                        
+                    });
+            
+            });
+        </script>
+        
         <script type="text/paperscript" canvas="projectile1">
           
             var start = false;
@@ -60,46 +190,7 @@
                 initial_velocity = parseFloat($('#initial_velocity').val());
                 building_height = parseFloat($('#wall_height').val());
                 pixelsPerMetre = (view.size.height - 50)/building_height;
-                
-                
-                function saveData(){    
-    //Initialize our client
-    var client = new Usergrid.Client({
-        orgName:"duncandean",
-        appName:"sandbox"
-    });
-    
-    //In our options object we set the type of the entitiy
-    //and we also set any data that goes along with it
-    //in this case it's the books title.
-    var options = {
-        name: "Query: " + new Date(),
-        type:"value",
-        initial_velocity: $('#initial_velocity').val(),
-        height: $('#wall_height').val()
-    };
-    
-    //Let's create our entity, and display the results
-    //of the creation in the html element with the id of response
-    client.createEntity(options, function(error, value){
-        if(error) {
-            //error saving book
-            
-        } else {
-            //book saved successfully
-            //Use book.get() here to get the properties from the object we just created!
-            var uuid = value.get("uuid");
-            var author = value.get("author");
-            var title = value.get("title");
-            
-            
-        }
-    }); 
-}
-
-saveData();
-
-            
+                                           
             
             });
             
@@ -268,7 +359,7 @@ saveData();
         <!-- Home Page -->
         <div data-role="page" id="home">
             <div data-role="content">
-                <div id="logo" style="text-align: center"><h1>Physics!</h1><a data-role="button" data-rel="dialog" data-theme="b" href="#sign_in">Sign In</a></div>
+                <div id="logo" style="text-align: center"><h1>Physics!</h1><h2 id="greeting"></h2><a id="signButton" data-role="button" data-rel="dialog" data-theme="b" href="#sign_in">Sign In</a><a id="signOutButton" style="display:none;" data-role="button" data-rel="dialog" data-theme="e" >Sign Out</a></div>
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
                     <li data-theme="a"><a href="#module1_index" data-transition="slide">Module 1: Mechanics</a></li>
@@ -290,13 +381,30 @@ saveData();
                 <h1>Sign in</h1>
             </div>
             <div data-role="content">
-                <input type="text" placeholder="Username" />
-                <input type="password" placeholder="Password" />
-                <input type="submit" value="Sign In" />
+                <input id="signUsername" type="text" placeholder="Username" />
+                <input id="signPassword" type="password" placeholder="Password" />
+                <input id="signSubmit" data-theme="e" type="submit" value="Sign In" />
                 <br>
                 <br>
-                <a href="register" data-role="button" data-rel="dialog">No account? -> Register</a>
+                <a data-theme="b" href="#register" data-role="button" data-rel="dialog">No account? -> Register</a>
             </div>        
+        </div>
+        
+        <!-- Register dialog -->
+        
+        <div data-role="page" id="register">
+            <div data-role="header" data-theme="d">
+                <h1>Register</h1>
+            </div>
+            <div data-role="content">
+                <input id="regName" type="text" placeholder="Name"/>
+                <input id="regSurname" type="text" placeholder="Surname" />
+                <input id="regUsername" type="text" placeholder="Username"/>
+                <input id="regEmail" type="email" placeholder="Email"/>
+                <input id="regPassword" type="password" placeholder="Password" />
+                <input id="regPasswordRepeat" type="password" placeholder="Repeat Password" />
+                <input id="regSubmit" type="submit" value="Register" />
+            </div>
         </div>
                 
         <!-- About -->
