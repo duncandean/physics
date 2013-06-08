@@ -245,14 +245,11 @@
                   }
                     wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
-                    var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
                 
                     var velocity = (gravity * realTime * pixelsPerMetre) + (initial_velocity * pixelsPerMetre);
                     ball.position.y += velocity/(1/event.delta);
 
                    
-                                        
-                    final_velocity.content = 'Final Velocity: \n' + final_value + ' m/s';
                     
                     if (ball.position.y > view.size.height - 16){
                         gravity = 0;
@@ -890,6 +887,8 @@
                     <br>
                     <br>
                     
+                    <h2>Scenario 2</h2>
+                    
                     <canvas id="projectile2" width="280" height="300"></canvas>
                     
                     <label for="wall_height">Wall height</label>
@@ -897,6 +896,13 @@
                     <label for="initial_velocity1">Initial velocity</label>
                     <input class="projectile2_values" type="text" id="initial_velocity2" />
                     <input id="projectile2_set_values" type="submit" value="Submit" />
+                    
+                    <br>
+                    <br>
+                    
+                    <h2>Scenario 3</h2>
+                    
+                    <canvas id="projectile3" width="280" height="300"></canvas>
                     
                     </p>
                     
