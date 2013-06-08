@@ -73,10 +73,12 @@
                                     $('#profileLink').css('display', 'block');
                                     
                                     
-                                    window.setTimeout(function(){$.mobile.changePage("#home",{allowSamePageTransition: true });}, 1000);
-                                    //$.mobile.changePage("#home",{allowSamePageTransition: true });
-                                    $('#signUsername').val('');
-                                    $('#signPassword').val('');
+                                    window.setTimeout(function(){
+                                        $.mobile.changePage("#home",{allowSamePageTransition: true });
+                                        $('#signUsername').val('');
+                                        $('#signPassword').val('');
+                                        }, 1000);
+                                    
                                     
                                     
                                 }
