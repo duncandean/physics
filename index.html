@@ -199,7 +199,7 @@
             var count = 0;
             var stone_velocity;
             
-            $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81; final_velocity.content = ""}});
+            $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81; final_velocity.content = ""; time.content = ""}});
             $('#projectile1_set_values').click(function(){
               
               
@@ -213,7 +213,13 @@
             });
             
             var final_velocity = new PointText({
-                point: [view.size.width - 160, 40],
+                point: [view.size.width - 120, 40],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
+            var time = new PointText({
+                point: [view.size.width - 120, 80],
                 fillColor: 'white',
                 fontSize: 16
             });
@@ -245,6 +251,10 @@
                   }
                     wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
+                    if (gravity === 9.81) {
+                        var timeValue = (Math.floor(parseFloat(realTime) * 100) / 100).toFixed(2).toString();
+                        time.content = 'Time: \n' + timeValue;
+                        }
                 
                     var velocity = (gravity * realTime * pixelsPerMetre) + (initial_velocity * pixelsPerMetre);
                     ball.position.y += velocity/(1/event.delta);
@@ -299,14 +309,14 @@
             ball.fillColor = 'red';
             ball.strokeColor = 'black';
             ball.strokeWidth = 3;
-            var originalPosition = ball.position
+            var originalPosition = ball.position;
             
             var count = 0;
             var initial_velocity = 0;
             var stone_velocity;
             
             
-            $('#projectile2').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position = originalPosition; gravity = 9.81; final_velocity.content = ""}});
+            $('#projectile2').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position = originalPosition; gravity = 9.81; final_velocity.content = ""; time.content = ""}});
             
             $('#projectile2_set_values').click(function(){
                 building_height = parseFloat($('#wall_height2').val());
@@ -328,7 +338,13 @@
             });
             
             var final_velocity = new PointText({
-                point: [view.size.width - 160, 40],
+                point: [view.size.width - 120, 40],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
+             var time = new PointText({
+                point: [view.size.width - 120, 80],
                 fillColor: 'white',
                 fontSize: 16
             });
@@ -347,9 +363,15 @@
                     }
                     var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
                     final_velocity.content = 'Final Velocity: \n' + final_value + ' m/s';
+                    
                   }
                     wall_height_text.content = building_height + " m";
                     var realTime = event.time - count;
+                    if (gravity === 9.81) {
+                        var timeValue = (Math.floor(parseFloat(realTime) * 100) / 100).toFixed(2).toString();
+                        time.content = 'Time: \n' + timeValue;
+                        }
+                    
                     
                     var velocity = (gravity * realTime * pixelsPerMetre) - (initial_velocity * pixelsPerMetre);
                     ball.position.y += velocity/(1/event.delta);
@@ -386,6 +408,14 @@
             boy_body.strokeColor = 'white';
             var boy_arms = new Path(new Point(50, view.size.height - 25), new Point(82, view.size.height - 40));
             boy_arms.strokeColor = 'white';
+            
+            var ball = new Path.Circle(new Point(80, view.size.height - 10), 10);
+            ball.fillColor = 'red';
+            ball.strokeColor = 'black';
+            ball.strokeWidth = 3;
+            var originalPosition = ball.position;
+            
+            
         
         </script>
         
