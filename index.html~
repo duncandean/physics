@@ -202,14 +202,17 @@
             $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81; final_velocity.content = ""; time.content = ""}});
             $('#projectile1_set_values').click(function(){
               
+              if (isNaN(parseFloat($('#initial_velocity').val())) === true) {}
+              else if (isNaN(parseFloat($('#wall_height').val())) === true) {}
               
+              else {
                 initial_velocity = parseFloat($('#initial_velocity').val());
                 stone_velocity = parseFloat($('#initial_velocity').val());
                 building_height = parseFloat($('#wall_height').val());
                 pixelsPerMetre = (view.size.height - 50)/building_height;
                 wall_height_text.content = building_height + " m";
                 viRef.content = "Vi: \n" + initial_velocity + " m/s";
-                
+              }
                                            
             
             });
@@ -329,6 +332,11 @@
             $('#projectile2').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position = originalPosition; gravity = 9.81; final_velocity.content = ""; time.content = ""}});
             
             $('#projectile2_set_values').click(function(){
+            
+            if (isNaN(parseFloat($('#initial_velocity2').val())) === true) {}
+            else if (isNaN(parseFloat($('#wall_height2').val())) === true) {}
+            
+            else {
                 building_height = parseFloat($('#wall_height2').val());
                 initial_velocity = parseFloat($('#initial_velocity2').val());
                 stone_velocity = parseFloat($('#initial_velocity2').val());
@@ -336,7 +344,7 @@
                 
                 pixelsPerMetre = (view.size.height - 90)/building_height;
                 viRef.content = "Vi: \n" + initial_velocity + " m/s";
-                
+            }
                 
             
             
@@ -361,7 +369,7 @@
             });
             
              var viRef = new PointText({
-                point: [5, 180],
+                point: [5, 200],
                 fillColor: 'white',
                 fontSize: 16
             });
@@ -946,7 +954,7 @@
                     <input class="projectile1_values" type="text" id="wall_height" />
                     <label for="initial_velocity1">Initial velocity</label>
                     <input class="projectile1_values" type="text" id="initial_velocity" />
-                    <input id="projectile1_set_values" type="submit" value="Submit" />
+                    <input id="projectile1_set_values" type="submit" value="Update Values" />
                     
                     <br>
                     <br>
@@ -959,7 +967,7 @@
                     <input class="projectile2_values" type="text" id="wall_height2" />
                     <label for="initial_velocity1">Initial velocity</label>
                     <input class="projectile2_values" type="text" id="initial_velocity2" />
-                    <input id="projectile2_set_values" type="submit" value="Submit" />
+                    <input id="projectile2_set_values" type="submit" value="Update Values" />
                     
                     <br>
                     <br>
