@@ -208,6 +208,8 @@
                 building_height = parseFloat($('#wall_height').val());
                 pixelsPerMetre = (view.size.height - 50)/building_height;
                 wall_height_text.content = building_height + " m";
+                viRef.content = "Vi: \n" + initial_velocity + " m/s";
+                
                                            
             
             });
@@ -230,6 +232,12 @@
                 fontSize: 16
             });
             
+            var viRef = new PointText({
+                point: [5, 160],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
             
                     
             
@@ -248,9 +256,15 @@
                     }
                     var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
                     final_velocity.content = 'Final Velocity: \n' + final_value + ' m/s';
+                    viRef.content = "Vi: \n" + initial_velocity + " m/s";
                   }
                     wall_height_text.content = building_height + " m";
+                    
                     var realTime = event.time - count;
+                    if (gravity === 9.81) {
+                        var timeValue = (Math.floor(parseFloat(realTime) * 100) / 100).toFixed(2).toString();
+                        time.content = 'Time: \n' + timeValue;
+                        }
                 
                     var velocity = (gravity * realTime * pixelsPerMetre) + (initial_velocity * pixelsPerMetre);
                     ball.position.y += velocity/(1/event.delta);
@@ -321,6 +335,7 @@
                 wall_height_text.content = building_height + " m";
                 
                 pixelsPerMetre = (view.size.height - 90)/building_height;
+                viRef.content = "Vi: \n" + initial_velocity + " m/s";
                 
                 
             
@@ -345,6 +360,12 @@
                 fontSize: 16
             });
             
+             var viRef = new PointText({
+                point: [5, 180],
+                fillColor: 'white',
+                fontSize: 16
+            });
+            
             function onFrame(event) {
             
                 ball.fillColor.hue += 1;
@@ -359,6 +380,7 @@
                     }
                     var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
                     final_velocity.content = 'Final Velocity: \n' + final_value + ' m/s';
+                    viRef.content = "Vi: \n" + initial_velocity + " m/s";
                     
                   }
                     wall_height_text.content = building_height + " m";
