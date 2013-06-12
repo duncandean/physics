@@ -1,26 +1,6 @@
 $(document).ready(function(){
 
-    window.addEventListener("deviceorientation", handleOrientation, true);
-    
-    function handleOrientation(event) {
-        var alpha = event.alpha;
-        var beta = event.beta;
-        var gamma = event.gamma;
-        if (alpha > 180.00){
-            $('#z_axis').css("color", "red");
-        }
-        if (beta > 0.00){
-            $('#x_axis').css("color", "blue");
-        }
-        if (gamma > 0.00){
-            $('#y_axis').css("color", "yellow");
-        }
-        
-        $('#z_axis').html(String(alpha.toFixed(2)));
-        $('#x_axis').html(String(beta.toFixed(2)));
-        $('#y_axis').html(String(gamma.toFixed(2)));
-        
-    }
+   
 
 
 

@@ -1,5 +1,20 @@
 $(document).ready(function(){
 
+    window.addEventListener('devicelight', function(event) {
+        var indicator = $('#brightness');
+        
+        $('#brightValue').text(event.value);
+        
+        if (event.value < 60) {
+            indicator.text("Too dim!");
+        }
+        else if (event.value < 130) {
+            indicator.text("Just right!");
+        }
+        else {
+            indicator.text("Too bright!");
+        }
+    });
    
 
 
