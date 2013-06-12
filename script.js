@@ -8,7 +8,7 @@ $(document).ready(function(){
         if (event.value < 200) {
             indicator.text("Too dim!");
         }
-        else if (event.value < 400) {
+        else if (event.value < 400 && event.value > 200) {
             indicator.text("Just right!");
         }
         else {
