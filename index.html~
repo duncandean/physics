@@ -536,6 +536,7 @@
                 <h3>Your username is <strong><span id="profileUsername"></span></strong></h3>
                 <br>
                 <p id="brightness"></p>
+                <p id="brightValue"></p>
                 <br>
                 <p>Change your profile picture on <a target="_blank" href="https://gravatar.com">Gravatar.com</a>!</p>
                 

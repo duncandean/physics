@@ -1,24 +1,5 @@
 $(document).ready(function(){
-
-    window.addEventListener('devicelight', function(event) {
-        var indicator = $('#brightness');
-        
-        $('#brightValue').text(event.value);
-        
-        if (event.value < 200) {
-            indicator.text("Too dim!");
-        }
-        else if (event.value < 400 && event.value > 200) {
-            indicator.text("Just right!");
-        }
-        else {
-            indicator.text("Too bright!");
-        }
-    });
-   
-
-
-
+ 
 
   $('#calculate').click(function(){
     var angle = parseFloat($('#angle_calc').val());
