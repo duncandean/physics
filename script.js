@@ -5,10 +5,10 @@ $(document).ready(function(){
         
         $('#brightValue').text(event.value);
         
-        if (event.value < 60) {
+        if (event.value < 200) {
             indicator.text("Too dim!");
         }
-        else if (event.value < 130) {
+        else if (event.value < 400) {
             indicator.text("Just right!");
         }
         else {
