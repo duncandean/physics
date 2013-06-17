@@ -65,7 +65,7 @@
                                                     var activity = activities[i];
                                                     //Use the .content property on the object to get the content data!
                                                     var content = activity.content;
-                                                    $("#profileFeed").append("<p style='background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;'>"+content+"</p>");
+                                                    $("#profileFeed").append("<p style='color: white; background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;'>"+content+"</p>");
 		                                            }
 	                                         });
                                             
