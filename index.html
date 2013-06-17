@@ -65,7 +65,7 @@
                                                     var activity = activities[i];
                                                     //Use the .content property on the object to get the content data!
                                                     var content = activity.content;
-                                                    $("#profileFeed").append("<li>"+content+"</li>");
+                                                    $("#profileFeed").append("<p>"+content+"</p><br><br>");
 		                                            }
 	                                         });
                                             
@@ -104,6 +104,10 @@
                 
                 $("#postActivity").click(function(event){
                 
+                if ($("#postContent").val() === ""){alert("No message entered!");}
+                
+                else {
+                
                  event.preventDefault();
                  
                  var client = new Usergrid.Client({
@@ -117,7 +121,7 @@
                          alert("Cannot get user!");
                     } else {
                         //Set your content here!
-                        var content = "Hello, World!";
+                        var content = $("#postContent").val();
                         var username = user.get("username");
                         client.createUserActivityWithEntity(user, content, function(error, activity){
                             if(error) {
@@ -129,17 +133,16 @@
                                 alert("Success!");
                                 
                                 client.getFeedForUser(username, function(error, data, activities){
-		                                        for(var i = 0; i < activities.length; i++) {
-                                                    var activity = activities[i];
-                                                    //Use the .content property on the object to get the content data!
-                                                    var content = activity.content;
-                                                    $("#profileFeed").html("<li>"+content+"</li>");
-		                                            }
+
+                                                    $("#profileFeed").prepend("<p>"+content+"</p><br><br>");
+		                                            
 	                                         });
                             }
                         });
                     }
                 });
+                
+                }
                 });
                     
                 //Register...
@@ -588,11 +591,10 @@
                 <br>
                 <br>
                 <p>Change your profile picture on <a target="_blank" href="https://gravatar.com">Gravatar.com</a>!</p>
+                <textarea id="postContent" rows="3" cols="80" placeholder="Enter your message!"></textarea>
                 <a data-role="button" id="postActivity">Post</a>
                 <h2>Your feed</h2>
-                <p>
-                    <ul id="profileFeed"></ul>
-                </p>
+                <div id="profileFeed"></div>
                 
             </div>
         </div>
