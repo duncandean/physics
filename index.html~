@@ -60,6 +60,15 @@
                                             $('#profileName').html(name);
                                             $('#profileUsername').html(username);
                                             
+                                            client.getFeedForUser("duncan", function(error, data, activities){
+		                                        for(var i = 0; i < activities.length; i++) {
+                                                    var activity = activities[i];
+                                                    //Use the .content property on the object to get the content data!
+                                                    var content = activity.content;
+                                                    $("#profileFeed").append("<li>"+content+"</li>");
+		                                            }
+	                                         });
+                                            
                                             
                                             
                                         }
@@ -90,6 +99,30 @@
                         signInUser();
                         
                     });
+                    
+                //Post activity...
+                
+                $("#postActivity").click(function(){
+                
+                 client.getLoggedInUser(function(error, data, user){
+                    if(error) {
+                        //$("#response").append("Error getting user!");
+                    } else {
+                        //Set your content here!
+                        var content = "Hello, World!";
+                        client.createUserActivityWithEntity(user, content, function(error, activity){
+                            if(error) {
+                                //$("#response").append("Error creating activity!");
+                            } else {
+                                //Get the content of your activity here!
+                                //var content = activity.get("content");
+                                //$("#response").append();
+                                alert("Success!");
+                            }
+                        });
+                    }
+                });
+                });
                     
                 //Register...
                 
@@ -535,10 +568,13 @@
                 <img id="profilePicture" />
                 <h3>Your username is <strong><span id="profileUsername"></span></strong></h3>
                 <br>
-                <p id="brightness"></p>
-                <p id="brightValue"></p>
                 <br>
                 <p>Change your profile picture on <a target="_blank" href="https://gravatar.com">Gravatar.com</a>!</p>
+                <a data-role="button" id="postActivity"></a>
+                <h2>Your feed</h2>
+                <p>
+                    <ul id="profileFeed"></ul>
+                </p>
                 
             </div>
         </div>
