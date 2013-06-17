@@ -65,7 +65,7 @@
                                                     var activity = activities[i];
                                                     //Use the .content property on the object to get the content data!
                                                     var content = activity.content;
-                                                    $("#profileFeed").append("<p>"+content+"</p><br><br>");
+                                                    $("#profileFeed").append("<p style='background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;'>"+content+"</p>");
 		                                            }
 	                                         });
                                             
@@ -130,13 +130,12 @@
                                 //Get the content of your activity here!
                                 //var content = activity.get("content");
                                 //$("#response").append();
-                                alert("Success!");
                                 
-                                client.getFeedForUser(username, function(error, data, activities){
-
-                                                    $("#profileFeed").prepend("<p>"+content+"</p><br><br>");
+                                $("#profileFeed").prepend("<p style='color: white; background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;'>"+content+"</p>");
+                                $("#postContent").val() = "";
 		                                            
-	                                         });
+	                                       
+	                            
                             }
                         });
                     }
@@ -594,7 +593,7 @@
                 <textarea id="postContent" rows="3" cols="80" placeholder="Enter your message!"></textarea>
                 <a data-role="button" id="postActivity">Post</a>
                 <h2>Your feed</h2>
-                <p id="profileFeed"></p>
+                <div id="profileFeed"></div>
                 
             </div>
         </div>
