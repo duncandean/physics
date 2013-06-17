@@ -112,11 +112,13 @@
                             });
                  
                  client.getLoggedInUser(function(error, data, user){
+                 
                     if(error) {
                          alert("Cannot get user!");
                     } else {
                         //Set your content here!
                         var content = "Hello, World!";
+                        var username = user.get("username");
                         client.createUserActivityWithEntity(user, content, function(error, activity){
                             if(error) {
                                  alert("Failed!");
