@@ -125,6 +125,15 @@
                                 //var content = activity.get("content");
                                 //$("#response").append();
                                 alert("Success!");
+                                
+                                client.getFeedForUser(username, function(error, data, activities){
+		                                        for(var i = 0; i < activities.length; i++) {
+                                                    var activity = activities[i];
+                                                    //Use the .content property on the object to get the content data!
+                                                    var content = activity.content;
+                                                    $("#profileFeed").append("<li>"+content+"</li>");
+		                                            }
+	                                         });
                             }
                         });
                     }
