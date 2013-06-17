@@ -102,8 +102,15 @@
                     
                 //Post activity...
                 
-                $("#postActivity").click(function(){
+                $("#postActivity").click(function(event){
                 
+                 event.preventDefault();
+                 
+                 var client = new Usergrid.Client({
+                                orgName: 'duncandean',
+                                appName: 'physics'
+                            });
+                 
                  client.getLoggedInUser(function(error, data, user){
                     if(error) {
                         //$("#response").append("Error getting user!");
