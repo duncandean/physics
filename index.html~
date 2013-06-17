@@ -113,13 +113,13 @@
                  
                  client.getLoggedInUser(function(error, data, user){
                     if(error) {
-                        //$("#response").append("Error getting user!");
+                         alert("Cannot get user!");
                     } else {
                         //Set your content here!
                         var content = "Hello, World!";
                         client.createUserActivityWithEntity(user, content, function(error, activity){
                             if(error) {
-                                //$("#response").append("Error creating activity!");
+                                 alert("Failed!");
                             } else {
                                 //Get the content of your activity here!
                                 //var content = activity.get("content");
