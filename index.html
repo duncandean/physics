@@ -2,502 +2,26 @@
 <html>
     <head>
         
-
 <!-- Don't change anything here! -->    
-        
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
         <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-        <script src="script.js"></script>   
+        <script src="script.js"></script>
         <meta charset="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
         <link rel="apple-touch-icon" href="./touch.png"/>
         <link rel="apple-touch-startup-image" href="./startup.png">
-        <script type="text/javascript" src="./apigee/usergrid.js" ></script>
-        <script type="text/javascript" src="./paper.js"></script>
-        
-        <script type="text/javascript">
-            
-            $(document).ready(function(){
-            //Click event listeners...
-            
-                        
-                //Login...
-                
-                    $('#signSubmit').click(function(event){
-                    
-                        event.preventDefault();
-                                                
-                        function signInUser(){
-                            var client = new Usergrid.Client({
-                                orgName: 'duncandean',
-                                appName: 'physics'
-                            });    
-                            
-                            var username = $('#signUsername').val();
-                            var password = $('#signPassword').val();
-                            
-                            client.login(username, password, function(error){
-                                if (error){
-                                    alert('Username and Password do not match!');
-                                } 
-                                
-                                else {
-                                     client.getLoggedInUser(function(error, data, user){
-                                        if(error) {
-                                            alert("There was an error with retrieving your user!");
-                                        } else {
-                                            
-                                            var picture = user.get("picture");
-                                            var name = user.get("name");
-                                            var username = user.get("username");
-                                            $('#greeting').html("Hello " + name + "!");
-                                            $('#profilePicture').attr('src', picture);
-                                            $('#profileName').html(name);
-                                            $('#profileUsername').html(username);
-                                            
-                                            client.getFeedForUser(username, function(error, data, activities){
-		                                        for(var i = 0; i < activities.length; i++) {
-                                                    var activity = activities[i];
-                                                    //Use the .content property on the object to get the content data!
-                                                    var content = activity.content;
-                                                    $("#profileFeed").append("<p style='color: white; background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;'>"+content+"</p>");
-		                                            }
-	                                         });
-                                            
-                                            
-                                            
-                                        }
-                                       });
-                                    
-                                    
-                                
-                                    
-                                    $('#signButton').css('display', 'none');
-                                    $('#signOutButton').css('display', 'block');
-                                    $('#profileLink').css('display', 'block');
-                                    
-                                    
-                                    window.setTimeout(function(){
-                                        $.mobile.changePage("#home",{allowSamePageTransition: true });
-                                        $('#signUsername').val('');
-                                        $('#signPassword').val('');
-                                        }, 1000);
-                                    
-                                    
-                                    
-                                }
-                            
-                            });
-                            
-                        }
-                        
-                        signInUser();
-                        
-                    });
-                    
-                //Post activity...
-                
-                $("#postActivity").click(function(event){
-                
-                if ($("#postContent").val() === ""){alert("No message entered!");}
-                
-                else {
-                
-                 event.preventDefault();
-                 
-                 var client = new Usergrid.Client({
-                                orgName: 'duncandean',
-                                appName: 'physics'
-                            });
-                 
-                 client.getLoggedInUser(function(error, data, user){
-                 
-                    if(error) {
-                         alert("Cannot get user!");
-                    } else {
-                        //Set your content here!
-                        var content = $("#postContent").val();
-                        var username = user.get("username");
-                        client.createUserActivityWithEntity(user, content, function(error, activity){
-                            if(error) {
-                                 alert("Failed!");
-                            } else {
-                                //Get the content of your activity here!
-                                //var content = activity.get("content");
-                                //$("#response").append();
-                                
-                                $("#profileFeed").prepend("<p style='color: white; background-color: gray; padding: 6px; text-shadow: 1px 1px 0.5px black; border-radius: 5%; opacity: 0.9;'>"+content+"</p>");
-                                $("#postContent").val("");
-		                                            
-	                                       
-	                            
-                            }
-                        });
-                    }
-                });
-                
-                }
-                });
-                    
-                //Register...
-                
-                    $('#regSubmit').click(function(){
-                        
-                        function signUpUser(){
-                            var client = new Usergrid.Client({
-                                orgName: 'duncandean',
-                                appName: 'physics'
-                                
-                            });    
-                        
-                            var username = $('#regUsername').val();
-                            var password = $('#regPassword').val();
-                            var email = $('#regEmail').val();
-                            var name = $('#regName').val();
-                        
-                            client.signup(username, password, email, name, function(error){
-                            
-                                if (error) {
-                                    alert('An error occurred!');
-                                } else {
-                                    
-                                    $('#regUsername').val('');
-                                    $('#regPassword').val('');
-                                    $('#regEmail').val('');
-                                    $('#regName').val('');
-                                    $.mobile.changePage("#home",{allowSamePageTransition: true });
-                                    $('#greeting').html('User created! Sign in now');
-                                }
-                            
-                            });
-                        
-                        }
-                        
-                        signUpUser();
-                    });
-                    
-                //Sign Out...
-                
-                    $('#signOutButton').click(function(event){
-                       
-                            event.preventDefault();
-                       
-                            function signOutUser(){
-                                    
-                                    var client = new Usergrid.Client({
-                                        orgName: 'duncandean',
-                                        appName: 'physics'
-                                    }); 
-                                                      
-                                    client.logout();
-
-                                        if (client.isLoggedIn()) {
-                                            alert("Error occurred!");
-                                        } else {
-                                            $('#signButton').css('display', 'block');
-                                            $('#signOutButton').css('display', 'none');
-                                            $('#profileLink').css('display', 'none');
-                                            $('#greeting').html('');
-                                            $("#profileFeed").html('');
-                                        }
-                            }
-                       
-                            signOutUser();
-                            
-                            
-                            
-                       
-                        
-                    });
-            
-            });
-        </script>
-        
-        <script type="text/paperscript" canvas="projectile1">
-          
-            var start = false;
-                    
-            var building_height = 8;
-            var building_left = new Point(0, 50);
-            var building_corner = new Point(80, 50);
-            var building_floor = new Point(80, view.size.height);
-            var building = new Path(building_left, building_corner, building_floor);
-            
-            var pixelsPerMetre = (view.size.height - 50)/building_height;
-            var gravity = 9.81;
-            
-            building.strokeColor = 'white';
-            
-            var boy_head = new Path.Circle(new Point(60, 5), 5);
-            boy_head.strokeColor = 'white';
-            var boy_body = new Path(new Point(60, 10), new Point(60, 30), new Point(70, 50), new Point(60, 30), new Point(50, 50));
-            boy_body.strokeColor = 'white';
-            var boy_arms = new Path(new Point(50, 25), new Point(82, 10));
-            boy_arms.strokeColor = 'white';
-            var ground = new Path(new Point(0, view.size.height), new Point(view.size.width, view.size.height));
-            ground.strokeColor = 'white';
-            ground.strokeWidth = 5;
-            
-            var ball = new Path.Circle(new Point(100, 35), 10);
-            ball.fillColor = 'red';
-            ball.strokeColor = 'black';
-            ball.strokeWidth = 3;
-            var originalPosition = ball.position.y;
-            
-            var initial_velocity = 0;
-            var count = 0;
-            var stone_velocity;
-            
-            $('#projectile1').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position.y = originalPosition; gravity = 9.81; final_velocity.content = ""; time.content = ""}});
-            $('#projectile1_set_values').click(function(){
-              
-              if (isNaN(parseFloat($('#initial_velocity').val())) === true) {}
-              else if (isNaN(parseFloat($('#wall_height').val())) === true) {}
-              
-              else {
-                initial_velocity = parseFloat($('#initial_velocity').val());
-                stone_velocity = parseFloat($('#initial_velocity').val());
-                building_height = parseFloat($('#wall_height').val());
-                pixelsPerMetre = (view.size.height - 50)/building_height;
-                wall_height_text.content = building_height + " m";
-                viRef.content = "Vi: \n" + initial_velocity + " m/s";
-              }
-                                           
-            
-            });
-            
-            var final_velocity = new PointText({
-                point: [view.size.width - 120, 40],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-            var time = new PointText({
-                point: [view.size.width - 120, 80],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-            var wall_height_text = new PointText({
-                point: [30, 100],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-            var viRef = new PointText({
-                point: [5, 160],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-            
-                    
-            
-            function onFrame(event) {
-            
-                ball.fillColor.hue += 1;
-    
-                if (start){
-                
-                  if (gravity === 0){
-                    initial_velocity = 0;
-                  }
-                  else {
-                    if (isNaN(stone_velocity) === false){
-                    initial_velocity = stone_velocity
-                    }
-                    var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
-                    final_velocity.content = 'Final Velocity: \n' + final_value + ' m/s';
-                    viRef.content = "Vi: \n" + initial_velocity + " m/s";
-                  }
-                    wall_height_text.content = building_height + " m";
-                    
-                    var realTime = event.time - count;
-                    if (gravity === 9.81) {
-                        var timeValue = (Math.floor(parseFloat(realTime) * 100) / 100).toFixed(2).toString();
-                        time.content = 'Time: \n' + timeValue;
-                        }
-                
-                    var velocity = (gravity * realTime * pixelsPerMetre) + (initial_velocity * pixelsPerMetre);
-                    ball.position.y += velocity/(1/event.delta);
-
-                   
-                    
-                    if (ball.position.y > view.size.height - 16){
-                        gravity = 0;
-                        initial_velocity = 0;
-                    
-                        }
-                    }
-                    
-                 else {
-                    count = event.time;
-                    
-                    }
-            
-            }
-            
-            
        
-        </script>
         
-        <script type="text/paperscript" canvas="projectile2">
-        
-        var start = false;
-                    
-            var building_height = 8;
-            var building_left = new Point(0, 90);
-            var building_corner = new Point(80, 90);
-            var building_floor = new Point(80, view.size.height);
-            var building = new Path(building_left, building_corner, building_floor);
-            
-            var pixelsPerMetre = (view.size.height - 90)/building_height;
-            
-            var gravity = 9.81;
-            
-            building.strokeColor = 'white';
-            
-            var boy_head = new Path.Circle(new Point(60, 45), 5);
-            boy_head.strokeColor = 'white';
-            var boy_body = new Path(new Point(60, 50), new Point(60, 70), new Point(70, 90), new Point(60, 70), new Point(50, 90));
-            boy_body.strokeColor = 'white';
-            var boy_arms = new Path(new Point(50, 65), new Point(82, 50));
-            boy_arms.strokeColor = 'white';
-            var ground = new Path(new Point(0, view.size.height), new Point(view.size.width, view.size.height));
-            ground.strokeColor = 'white';
-            ground.strokeWidth = 5;
-            
-            var ball = new Path.Circle(new Point(100, 75), 10);
-            ball.fillColor = 'red';
-            ball.strokeColor = 'black';
-            ball.strokeWidth = 3;
-            var originalPosition = ball.position;
-            
-            var count = 0;
-            var initial_velocity = 0;
-            var stone_velocity;
-            
-            
-            $('#projectile2').click(function(e){e.preventDefault(); if (start === false){start = true;} else {start = false; ball.position = originalPosition; gravity = 9.81; final_velocity.content = ""; time.content = ""}});
-            
-            $('#projectile2_set_values').click(function(){
-            
-            if (isNaN(parseFloat($('#initial_velocity2').val())) === true) {}
-            else if (isNaN(parseFloat($('#wall_height2').val())) === true) {}
-            
-            else {
-                building_height = parseFloat($('#wall_height2').val());
-                initial_velocity = parseFloat($('#initial_velocity2').val());
-                stone_velocity = parseFloat($('#initial_velocity2').val());
-                wall_height_text.content = building_height + " m";
-                
-                pixelsPerMetre = (view.size.height - 90)/building_height;
-                viRef.content = "Vi: \n" + initial_velocity + " m/s";
-            }
-                
-            
-            
-            });
-            
-            var wall_height_text = new PointText({
-                point: [30, 160],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-            var final_velocity = new PointText({
-                point: [view.size.width - 120, 40],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-             var time = new PointText({
-                point: [view.size.width - 120, 80],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-             var viRef = new PointText({
-                point: [5, 200],
-                fillColor: 'white',
-                fontSize: 16
-            });
-            
-            function onFrame(event) {
-            
-                ball.fillColor.hue += 1;
-                if (start) {
-                    
-                  if (gravity === 0){
-                    initial_velocity = 0;
-                  }
-                  else {
-                    if (isNaN(stone_velocity) === false){
-                    initial_velocity = stone_velocity
-                    }
-                    var final_value = (Math.floor(Math.sqrt((initial_velocity * initial_velocity) + (2 * 9.81 * building_height)) * 100) / 100).toFixed(2).toString();
-                    final_velocity.content = 'Final Velocity: \n' + final_value + ' m/s';
-                    viRef.content = "Vi: \n" + initial_velocity + " m/s";
-                    
-                  }
-                    wall_height_text.content = building_height + " m";
-                    var realTime = event.time - count;
-                    if (gravity === 9.81) {
-                        var timeValue = (Math.floor(parseFloat(realTime) * 100) / 100).toFixed(2).toString();
-                        time.content = 'Time: \n' + timeValue;
-                        }
-                    
-                    
-                    var velocity = (gravity * realTime * pixelsPerMetre) - (initial_velocity * pixelsPerMetre);
-                    ball.position.y += velocity/(1/event.delta);
-                     if (ball.position.x < view.size.width/2 + 20){
-                     
-                     ball.position.x += 1;
-                     
-                     }
-                     if (ball.position.y > view.size.height - 16){
-                        gravity = 0;
-                        
-                    
-                     }
-                 }
-                
-                else {
-                    count = event.time;
-                    
-                } 
-            
-            }
-        </script>
-        
-        <script type="text/paperscript" canvas="projectile3">
-        
-            var ground = new Path();
-            ground.strokeColor = 'white';
-            ground.add(new Point(0, view.size.height), new Point(view.size.width, view.size.height));
-            ground.strokeWidth = 5;
-        
-            var boy_head = new Path.Circle(new Point(60, view.size.height - 45), 5);
-            boy_head.strokeColor = 'white';
-            var boy_body = new Path(new Point(60, view.size.height - 40), new Point(60, view.size.height - 20), new Point(70, view.size.height), new Point(60, view.size.height - 20), new Point(50, view.size.height));
-            boy_body.strokeColor = 'white';
-            var boy_arms = new Path(new Point(50, view.size.height - 25), new Point(82, view.size.height - 40));
-            boy_arms.strokeColor = 'white';
-            
-            var ball = new Path.Circle(new Point(80, view.size.height - 10), 10);
-            ball.fillColor = 'red';
-            ball.strokeColor = 'black';
-            ball.strokeWidth = 3;
-            var originalPosition = ball.position;
-            
-            
-        
-        </script>
-        
-        
+        <script type="text/javascript" src="./apigee/usergrid.js"></script>
+        <script type="text/javascript" src="./paper.js"></script>
+        <script type="text/paperscript" canvas="projectile1" src="js/projectile1.js"></script>
+        <script type="text/paperscript" canvas="projectile2" src="js/projectile2.js"></script>
+        <script type="text/paperscript" canvas="projectile3" src="js/projectile3.js"></script>
+        <script type="text/javascript" src="js/social.js"></script>
         
         <title>Physics!</title>
         
@@ -505,20 +29,22 @@
         <script>
             try {
 
-    $(function() {
+                $(function() {
 
-    });
+                });
 
-  } catch (error) {
-    console.error("Your javascript has an error: " + error);
-  }
+            } catch (error) {
+                console.error("Your javascript has an error: " + error);
+            }
         </script> 
+        
         <style>
             h1 {
                 text-align: center;
             }
             math {padding:4px;}
-        </style>   
+        </style>  
+        
     </head>
     
 <!-- Here is the body of the app and content can be inserted in this area -->
@@ -530,7 +56,10 @@
         <!-- Home Page -->
         <div data-role="page" id="home">
             <div data-role="content">
-                <div id="logo" style="text-align: center"><h1>Physics!</h1><h2 id="greeting" style="color: red; text-shadow: 2px 2px 2px black;"></h2><a id="signButton" data-role="button" data-rel="dialog" data-theme="b" href="#sign_in">Sign In</a><a id="signOutButton" style="display:none;" data-role="button" data-theme="b">Sign Out</a><a id="profileLink" href="#profile" style="display:none;" data-role="button" data-theme="e" >Profile</a></div>
+                <div id="logo" style="text-align: center">
+                    <h1>Physics!</h1>
+                </div>
+                
                 <ul data-role="listview" data-divider-theme="b" data-inset="true">
                     <li data-role="list-divider" role="heading"></li>
                     <li data-theme="a"><a href="#module1_index" data-transition="slide">Module 1: Mechanics</a></li>
@@ -538,65 +67,14 @@
                     <li data-theme="a"><a href="#module3_index" data-transition="slide">Module 3: Electricity and Magnetism</a></li>
                     <li data-theme="a"><a href="#module4_index" data-transition="slide">Module 4: Matter and Materials</a></li>
                 </ul>
+                
                 <a data-role="button" data-transition="fade" href="#formulae">Formulae</a>
                 <a data-role="button" data-transition="fade" href="#definitions" data-theme="d">Definitions</a>
                 <a data-role="button" href="#about" data-rel="dialog" data-transition="pop" data-theme="e">About</a>
             </div>
         </div>
         
-        <!-- Do not change! -->
-        <!-- Sign in dialog -->
-        
-        <div data-role="page" id="sign_in">
-            <div data-role="header" data-theme="e">
-                <h1>Sign in</h1>
-            </div>
-            <div data-role="content">
-                <input id="signUsername" type="text" placeholder="Username" />
-                <input id="signPassword" type="password" placeholder="Password" />
-                <input id="signSubmit" data-theme="e" type="submit" value="Sign In" />
-                <br>
-                <br>
-                <a data-theme="b" href="#register" data-role="button" data-rel="dialog">No account? -> Register</a>
-            </div>        
-        </div>
-        
-        <!-- Register dialog -->
-        
-        <div data-role="page" id="register">
-            <div data-role="header" data-theme="d">
-                <h1>Register</h1>
-            </div>
-            <div data-role="content">
-                <input id="regName" type="text" placeholder="Name"/>
-                <input id="regUsername" type="text" placeholder="Username"/>
-                <input id="regEmail" type="email" placeholder="Email"/>
-                <input id="regPassword" type="password" placeholder="Password" />
-                <input id="regSubmit" type="submit" value="Register" />
-            </div>
-        </div>
-        
-        <!-- Profile Page -->
-        
-        <div data-role="page" id="profile">
-            <div data-role="header" data-theme="c"><a data-role="button" href="#home">Back</a>
-                <h1>Your Profile</h1>
-            </div>
-            <div data-role="content">
-                <h1 id="profileName"></h1>
-                <img id="profilePicture" />
-                <h3>Your username is <strong><span id="profileUsername"></span></strong></h3>
-                <br>
-                <br>
-                <p>Change your profile picture on <a target="_blank" href="https://gravatar.com">Gravatar.com</a>!</p>
-                <textarea id="postContent" rows="3" cols="80" placeholder="Enter your message!"></textarea>
-                <a data-role="button" id="postActivity">Post</a>
-                <h2>Your feed</h2>
-                <div id="profileFeed"></div>
-                
-            </div>
-        </div>
-                
+     
         <!-- About -->
         
         <div data-role="page" id="about">
@@ -2072,7 +1550,7 @@ Mechanical energy not conserved!
 
 <p>The double-slit diffraction pattern is different to the single-slit one in the fact that it has equally spaced bands and the brightness is the same throughout. There is no central maximum.</p>
 
-<h4>And now for something exciting... Welcome to my world</h4>
+<h4>And now for something exciting... </h4>
 <p>You've probably heard that electrons act as waves and particles. In the quantum world, something very peculiar pops up when firing electrons at a double-slit barrier. The individual electron causes interference with itslef and the stream of electrons through the double slit will cause a diffraction pattern to occur. Now for the strange part... The electron (one electron) goes through the one slit, the other slit, both slits and none of the slits AT THE SAME TIME. Welcome to the quantum world where everything is topsy turvy and things make your head hurt. If that wasn't strange enough, the act of observing which slit the electron travels through actually breaks down the wave function of that electron! It then acts as a particle and does not form an interference pattern.</p>
 
 <p>These images show the build up of electrons on a screen over time when their wavefunction is not being collapsed due to observation of the path it takes.</p>
