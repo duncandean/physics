@@ -2,5 +2,6 @@
   "verification_key" : "6b57168c-da15-4e81-aff2-e9b70b0a63ff",
   "version" : "0.00(0)",
   "type" : "web",
-  "last_update" : "2013-12-13 07:22:18+0000"
+  "last_update" : "2013-12-13 07:22:18+0000",
+  "launch_path": "/index.html"
 }
